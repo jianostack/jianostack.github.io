@@ -1,0 +1,54 @@
+# Load media from production
+# Put inside uploads
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule (.*) http://example.com/wp-content/uploads/$1
+</IfModule>
+
+# sucuri hardening
+<Files *.php>
+ deny from all
+</Files>
+
+# list files in a dir
+Options +Indexes
+
+# redirect
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule (.*) http://www.thomsonmedical.com/thomson-diagnostic-imaging-centre/$1 [R=301,L]
+
+# redirect directory
+Redirect 301 /old-directory http://www.newurl.com
+
+# error redirects
+ErrorDocument 403 http://www.domain.com/
+ErrorDocument 404 http://www.domain.com/
+
+# restrict ip access to wordpress login
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
+RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
+RewriteCond %{REMOTE_ADDR} !^66\.96\.204\.23$
+RewriteCond %{REMOTE_ADDR} !^202\.79\.209\.94$
+RewriteRule ^(.*)$ - [R=403,L]
+
+# restrict ip access to a file
+<FilesMatch "file.php$">
+    Order deny,allow
+    Deny from all
+    Allow from 104.192.143.192/28 104.192.143.208/28
+</FilesMatch>
+
+# restrict file types
+<Files ~ ".*\..*">
+        Order Allow,Deny
+        Deny from all
+</Files>
+<FilesMatch "\.(jpg|jpeg|jpe|gif|png|tif|tiff|pdf)$">
+        Order Deny,Allow
+        Allow from all
+</FilesMatch>

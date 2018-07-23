@@ -1,0 +1,19 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.openEditors.visible": 0,
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 2,
+    "window.newWindowDimensions": "inherit",
+    "php-cs-fixer.executablePath": "/Users/user/.composer/vendor/bin/php-cs-fixer",
+    "extensions.ignoreRecommendations": true,
+    "editor.tabCompletion": true,
+    "php-cs-fixer.formatHtml": true,
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+}
