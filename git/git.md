@@ -44,3 +44,8 @@ git merge branch_b
 
 ## revert to a commit
 git revert af64315
+
+## set repository email and name
+git config user.email "email@example.com"
+
+git config user.name "jianli"
