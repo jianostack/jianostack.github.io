@@ -9,6 +9,8 @@
     "extensions.ignoreRecommendations": true,
     "editor.tabCompletion": true,
     "php-cs-fixer.formatHtml": true,
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
     "files.exclude": {
         "**/.git": false,
         "**/.svn": true,
@@ -16,4 +18,7 @@
         "**/CVS": true,
         "**/.DS_Store": true
     },
+    "git.enableSmartCommit": true,
+    "editor.fontSize": 13,
+    "editor.lineHeight": 25,
 }
