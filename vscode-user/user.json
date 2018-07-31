@@ -20,5 +20,5 @@
     },
     "git.enableSmartCommit": true,
     "editor.fontSize": 13,
-    "editor.lineHeight": 25,
+    "editor.lineHeight": 25
 }
