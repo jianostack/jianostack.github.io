@@ -5,7 +5,7 @@
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
     "window.newWindowDimensions": "inherit",
-    "php-cs-fixer.executablePath": "/Users/user/.composer/vendor/bin/php-cs-fixer",
+    "php-cs-fixer.executablePath": "/Users/mijly2/.composer/vendor/bin/php-cs-fixer",
     "extensions.ignoreRecommendations": true,
     "editor.tabCompletion": true,
     "php-cs-fixer.formatHtml": true,
@@ -20,5 +20,6 @@
     },
     "git.enableSmartCommit": true,
     "editor.fontSize": 13,
-    "editor.lineHeight": 25
+    "editor.lineHeight": 30,
+    "files.insertFinalNewline": true,
 }
