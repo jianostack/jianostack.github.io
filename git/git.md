@@ -47,6 +47,8 @@ git revert af64315
 
 git reset --hard af64315 
 
+git push -f
+
 ## set repository email and name
 git config user.email "email@example.com"
 
