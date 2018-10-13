@@ -110,3 +110,6 @@ sudo ufw status
 
 # add ip to firewall
 sudo ufw allow from 15.15.15.51 to any port 22
+
+# find pecl inside current dir
+ls -l | grep pecl
