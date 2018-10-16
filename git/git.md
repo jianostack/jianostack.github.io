@@ -53,3 +53,6 @@ git push -f
 git config user.email "email@example.com"
 
 git config user.name "jianli"
+
+## pre-commit
+`chmod a+x pre-commit`
