@@ -9,3 +9,6 @@
 
 ### stats
 `docker stats`
+
+### remove all stopped containers
+`docker rm $(docker ps -a -q)`
