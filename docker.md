@@ -1,8 +1,8 @@
 ### build 
-`docker build -t <image_name>:<image_tag> <path_to_dockerfile>`
+`docker build -t image_name:image_tag_optional path_to_dockerfile`
 
 ### run
-`docker run --env-file .env -p <host_port>:<container_port> <image_name>:<image_tag>`
+`docker run --env-file .env -p host_port:container_port image_name:image_tag_optional`
 
 ### list images
 `docker ps`
