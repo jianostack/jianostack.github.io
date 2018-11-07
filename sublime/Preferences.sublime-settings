@@ -1,5 +1,4 @@
 {
-  "always_show_minimap_viewport": false,
   "auto_complete_selector": "source, text",
   "auto_match_enabled": false,
   "detect_indentation": false,
@@ -17,8 +16,22 @@
     ".Trashes",
     "*.scssc"
   ],
+  "find_selected_text": true,
+  "folder_exclude_patterns":
+  [
+    ".svn",
+    ".hg",
+    "CVS"
+  ],
+  "font_size": 14,
   "highlight_line": true,
   "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "line_padding_bottom": 10,
+  "line_padding_top": 10,
   "open_files_in_new_window": false,
   "scroll_past_end": true,
   "show_encoding": true,
@@ -26,7 +39,5 @@
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true,
-  "word_wrap": false,
-  "folder_exclude_patterns": [".svn", ".hg", "CVS"],
-  "find_selected_text": true
+  "word_wrap": false
 }

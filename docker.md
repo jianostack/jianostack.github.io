@@ -1,4 +1,4 @@
-### build 
+### build
 `docker build -t image_name:image_tag_optional path_to_dockerfile`
 
 ### run
