@@ -52,3 +52,7 @@ RewriteRule ^(.*)$ - [R=403,L]
         Order Deny,Allow
         Allow from all
 </FilesMatch>
+
+# block git folder access
+# https://smitka.me/
+RewriteRule "(^|/)\.(?!well-known\/)" - [F]
