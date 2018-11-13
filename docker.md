@@ -12,3 +12,12 @@
 
 ### remove all stopped containers
 `docker rm $(docker ps -a -q)`
+
+### run commands
+docker exec -it <container_id> ash
+
+### logs
+docker logs <container_id> | head
+
+### stats
+docker stats <container_id_1>

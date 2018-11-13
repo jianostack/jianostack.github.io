@@ -55,4 +55,5 @@ RewriteRule ^(.*)$ - [R=403,L]
 
 # block git folder access
 # https://smitka.me/
+RewriteEngine On
 RewriteRule "(^|/)\.(?!well-known\/)" - [F]
