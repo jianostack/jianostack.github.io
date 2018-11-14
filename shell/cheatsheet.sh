@@ -1,10 +1,10 @@
 #terminal cheat sheet
 
 #switch user
-sudo su 
+sudo su
 
 #use user
-sudo -u 
+sudo -u
 
 #newuser
 sudo adduser
@@ -13,9 +13,9 @@ sudo adduser
 sudo deluser
 
 #reset user pw
-sudo passwd 
+sudo passwd
 
-#find apt-get processes 
+#find apt-get processes
 ps aux | grep apt
 
 #kill process
@@ -53,7 +53,7 @@ php -i
 #list mysql connections
 ps aux | grep mysql
 
-#rpm list installed package 
+#rpm list installed package
 rpm -qlp telnet-server-1.2-137.1.i586.rpm
 
 #rpmbuild from tarballs
@@ -72,7 +72,7 @@ nmap localhost
 nc -l 443
 
 #open firewall ports
-sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT 
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
 
 #who is apache user and group
@@ -113,3 +113,6 @@ sudo ufw allow from 15.15.15.51 to any port 22
 
 # find pecl inside current dir
 ls -l | grep pecl
+
+#copy from server
+scp
