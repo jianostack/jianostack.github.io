@@ -16,8 +16,13 @@
 ### run commands
 docker exec -it <container_id> ash
 
+docker exec -it <container_id> bash
+
 ### logs
 docker logs <container_id> | head
 
 ### stats
 docker stats <container_id_1>
+
+### docker kill all
+`docker kill $(docker ps -q)`
