@@ -1,4 +1,0 @@
-[
-  { "keys": ["command+shift+r"], "command": "reindent"},
-  { "keys": ["ctrl+alt+super+t"], "command": "expand_tabs", "args" : {"set_translate_tabs" : true} }
-]
