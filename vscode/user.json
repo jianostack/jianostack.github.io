@@ -1,9 +1,7 @@
 {
     "workbench.startupEditor": "newUntitledFile",
     "explorer.openEditors.visible": 0,
-    "workbench.activityBar.visible": false,
     "editor.minimap.enabled": false,
-    "editor.tabSize": 2,
     "window.newWindowDimensions": "inherit",
     "php-cs-fixer.executablePath": "/Users/user/.composer/vendor/bin/php-cs-fixer",
     "extensions.ignoreRecommendations": true,
@@ -18,8 +16,16 @@
         "**/.DS_Store": true
     },
     "git.enableSmartCommit": true,
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "editor.lineHeight": 30,
     "files.insertFinalNewline": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorTheme": "Monokai",
+    "blade.format.enable": true,
+    "files.autoSave": "afterDelay",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.formatHtml": true
 }
