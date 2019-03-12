@@ -35,7 +35,7 @@ tmux -CC
 # disk space
 df -h
 
-# List files and their size
+# List files and their sizeasdfa
 du -sh *
 
 # Processes
