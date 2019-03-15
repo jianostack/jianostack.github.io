@@ -4,7 +4,7 @@
 ### run
 `docker run --env-file .env -p host_port:container_port image_name:image_tag_optional`
 
-### list images
+### list active containers
 `docker ps`
 
 ### stats
@@ -26,3 +26,6 @@ docker stats <container_id_1>
 
 ### docker kill all
 `docker kill $(docker ps -q)`
+
+### remove images
+docker rmi image_id
