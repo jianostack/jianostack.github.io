@@ -71,6 +71,9 @@ nmap localhost
 #open port
 nc -l 443
 
+# free port and kill process
+sudo fuser -k Port_Number/tcp
+
 #open firewall ports
 sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
