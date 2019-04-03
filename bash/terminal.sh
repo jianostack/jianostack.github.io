@@ -119,3 +119,7 @@ ls -l | grep pecl
 
 #copy from server
 scp
+
+# temperature
+# milidegrees celcius
+cat /sys/class/thermal/thermal_zone*/temp
