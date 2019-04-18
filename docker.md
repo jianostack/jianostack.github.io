@@ -29,3 +29,6 @@ docker stats <container_id_1>
 
 ### remove images
 docker rmi image_id
+
+### copy file
+docker cp mycontainer_id:/foo.txt foo.txt
