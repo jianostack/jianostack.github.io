@@ -59,7 +59,9 @@ git config user.name "jianli"
 `chmod a+x pre-commit`
 
 
-## I don’t care if there is any other conflict. My branch A will win. Always
+## force merge
+
+I don’t care if there is any other conflict. My branch A will win. Always
 
 ```
 git checkout A
