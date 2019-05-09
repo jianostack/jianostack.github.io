@@ -55,4 +55,15 @@ git config user.email "email@example.com"
 git config user.name "jianli"
 
 ## pre-commit
+
 `chmod a+x pre-commit`
+
+
+## I don’t care if there is any other conflict. My branch A will win. Always
+
+```
+git checkout A
+git merge -s ours master
+git checkout master
+git merge A
+```
