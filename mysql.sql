@@ -5,7 +5,7 @@ drop database dbname;
 drop user name;
 
 #create database
-create database;
+create database name;
 
 #create user
 create user 'dumper'@'%' identified by 'password';
