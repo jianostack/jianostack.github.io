@@ -9,7 +9,7 @@ git reset --hard origin/master
 git checkout filename
 
 ## Resets the index and working tree.
-git reset --hard af64315 
+git reset --hard af64315
 
 ## Merge conflicts
 git mergetool
@@ -45,14 +45,14 @@ git merge branch_b
 ## revert to a commit
 git revert af64315
 
-git reset --hard af64315 
+git reset --hard af64315
 
 git push -f
 
 ## set repository email and name
 git config user.email "email@example.com"
 
-git config user.name "jianli"
+git config user.name "user"
 
 ## pre-commit
 
@@ -69,3 +69,7 @@ git merge -s ours master
 git checkout master
 git merge A
 ```
+
+## Amend commit message
+
+`git commit --amend`
