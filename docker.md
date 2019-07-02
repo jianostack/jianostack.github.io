@@ -4,6 +4,8 @@
 ### run
 `docker run --env-file .env -p host_port:container_port image_name:image_tag_optional`
 
+`docker run --env DB_HOST=host.docker.internal --env DB_PORT=3306 -p 5000:80 koi-api`
+
 ### list active containers
 `docker ps`
 
