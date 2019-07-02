@@ -123,3 +123,6 @@ scp
 # temperature
 # milidegrees celcius
 cat /sys/class/thermal/thermal_zone*/temp
+
+# nodejs logging
+node bin/www > my_app_log.log 2> my_app_err.log
