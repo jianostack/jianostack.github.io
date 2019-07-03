@@ -1,17 +1,14 @@
-#! /bin/bash
 # azure-cli, nodejs-legacy, npm, zip
-
-echo "sudo apt-get update"
 sudo apt-get update
-
-echo "sudo apt-get install nodejs-legacy"
-sudo apt-get install -y nodejs-legacy
-
-echo "sudo apt-get install npm"
-sudo apt-get install -y npm
-
-echo "sudo npm install azure-cli -g"
+sudo apt-get install -y nodejs-legacy npm zip
 sudo npm install -y azure-cli -g
 
-echo "sudo apt-get install zip"
-sudo apt-get install -y zip
+## Log into Azure cli
+
+`az account set --subscription id-id-id-id-id`
+
+`az acr login --name registry_name`
+
+## Azure Containers
+
+`az acr repository show-tags --name registry_name --repository image_name`
