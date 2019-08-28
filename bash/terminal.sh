@@ -32,7 +32,7 @@ watch -n 2 df -h
 #iterm tmux
 tmux -CC
 
-# disk space
+# HDD disk space
 df -h
 
 # List files and their sizeasdfa
