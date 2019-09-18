@@ -1,5 +1,3 @@
-https://git-scm.com/docs
-
 ## No you are NOT Already up-to-date.
 git fetch --all
 
@@ -29,12 +27,6 @@ git branch -av
 ## Switch branch
 git checkout my_branch
 
-## Delete branch
-git branch -d my_branch
-
-## Create branch
-git branch new_branch
-
 ## Merge branch_a into branch_b
 git fetch --all
 
@@ -55,12 +47,10 @@ git config user.email "email@example.com"
 git config user.name "user"
 
 ## pre-commit
-
 `chmod a+x pre-commit`
 
 
 ## force merge
-
 I don’t care if there is any other conflict. My branch A will win. Always
 
 ```
@@ -71,5 +61,10 @@ git merge A
 ```
 
 ## Amend commit message
-
 `git commit --amend`
+
+## git log
+`git log --oneline --graph --color --all --decorate`
+
+## git tree
+`gitk --all`
