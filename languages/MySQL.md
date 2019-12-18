@@ -85,3 +85,27 @@ WHERE   table_schema = @DATABASE_NAME
 AND     `ENGINE` = 'MyISAM'
 AND     `TABLE_TYPE` = 'BASE TABLE'
 ORDER BY table_name DESC;
+
+# Out of sync
+
+Is your local and staging NOW() returning different time?
+
+Ideally we want to use the global time_zone +00:00 but if you want to localise then do the following.
+
+## MYSQL
+
+Check MYSQL time_zone
+
+`SELECT @@global.time_zone;`
+
+To set a value for it use either one:
+
+`SET GLOBAL time_zone = '+8:00';`
+
+`SET @@global.time_zone='+00:00';`
+
+[Reference](https://stackoverflow.com/questions/19023978/should-mysql-have-its-timezone-set-to-utc)
+
+## Amazon RDS
+
+[Change](https://aws.amazon.com/premiumsupport/knowledge-center/rds-change-time-zone/) RDS time_zone.
