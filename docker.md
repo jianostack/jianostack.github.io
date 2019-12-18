@@ -34,3 +34,9 @@ docker rmi image_id
 
 ### copy file
 docker cp mycontainer_id:/foo.txt foo.txt
+
+### volume
+
+`docker volume create volumename`
+
+`docker run -p 8080:80 --env-file .env -v volumename:/var/www/html buildname`
