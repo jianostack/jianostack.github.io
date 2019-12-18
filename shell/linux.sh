@@ -4,7 +4,7 @@
 sudo su
 
 #use user
-sudo -u
+sudo -u username
 
 #newuser
 sudo adduser
