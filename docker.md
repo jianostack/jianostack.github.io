@@ -40,3 +40,6 @@ docker cp mycontainer_id:/foo.txt foo.txt
 `docker volume create volumename`
 
 `docker run -p 8080:80 --env-file .env -v volumename:/var/www/html buildname`
+
+### use local DB
+`DB_HOST=host.docker.internal`
