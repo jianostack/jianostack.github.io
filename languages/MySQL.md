@@ -1,11 +1,18 @@
 # drop database
 drop database dbname;
 
-# drop user
-drop user name;
-
 # create database
 create database name;
+
+# import single database
+mysql -uroot -p dbname < db.sql
+
+# import method 2
+sql> use dbname;
+sql> source db.sql;
+
+# drop user
+drop user name;
 
 # create user
 create user 'dumper'@'%' identified by 'password';
@@ -15,18 +22,6 @@ GRANT ALL PRIVILEGES ON dbname.* To 'user'@'host';
 
 # all privileges with grant on wildcard
 GRANT ALL PRIVILEGES ON *.* To 'user'@'host' WITH GRANT OPTION;
-
-# import single database
-mysql -uroot -p dbname < db.sql
-
-# import method 2
-sql> use dbname;
-sql> source db.sql;
-
-# import mysqldump
-mysql -uroot -p -h localhost < dump.sql
-
-https://makandracards.com/makandra/595-dumping-and-importing-from-to-mysql-in-an-utf-8-safe-way
 
 # mysqldump single database remotely
 mysqldump -h -u -p database_name > dump.sql 
