@@ -1,20 +1,12 @@
 ## Overview
 
 All resource all namespaces
-
 `kubectl get all -A`
-
-Kubernetes delete
-
-```
-kubectl delete deployment <deployment-name>
-kubectl delete ingress <ingress-name>
-kubectl delete service <service-name>
-```
 
 ## Deployments
 
 `kubectl get deployments`
+`kubectl delete deployment <deployment-name>`
 
 ## Pods
 
@@ -32,12 +24,12 @@ kubectl delete service <service-name>
 
 ## Services
 
-kubectl get service
+`kubectl get service`
+`kubectl delete service <service-name>`
 
 ## Secrets
 
 `kubectl get secrets`
-
 `kubectl delete secret tls-secret`
 
 Check certificates
