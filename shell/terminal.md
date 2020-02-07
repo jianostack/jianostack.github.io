@@ -69,12 +69,18 @@ nmap localhost
 ## open port
 nc -l 443
 
-## free port and kill process
-sudo fuser -k Port_Number/tcp
+## What ports are open and who is accessing
+sudo ufw status
+
+## add ip to firewall port
+sudo ufw allow from 15.15.15.51 to any port 22
 
 ## open firewall ports
 sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+
+## free port and kill process
+sudo fuser -k Port_Number/tcp
 
 ## who is apache user and group
 ps aux | egrep '(apache|httpd)'
@@ -91,7 +97,10 @@ https://askubuntu.com/questions/194/how-can-i-install-just-security-updates-from
 host -a example.com
 
 ## system info
-lscpu
+`lscpu`
+
+## Check Operating System (OS)
+`hostnamectl`
 
 ## rebuild spotlight index
 sudo mdutil -E /
@@ -106,12 +115,6 @@ zip -er name.zip directory/*
 
 ## Find IP address
 ifconfig
-
-## What ports are open and who is accessing
-sudo ufw status
-
-## add ip to firewall
-sudo ufw allow from 15.15.15.51 to any port 22
 
 ## find pecl inside current dir
 ls -l | grep pecl
