@@ -10,3 +10,7 @@ https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutoria
 https://www.tweaked.io/benchmarking/
 
 https://loadimpact.com/
+
+## chmod linux permissions
+
+https://chmodcommand.com
