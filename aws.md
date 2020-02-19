@@ -1,11 +1,8 @@
-Setup credentials
-
+## AWS CLI Setup credentials
 `aws configure`
 
-## Service already exists
-
+## AWS CLI Service already exists
 `aws servicediscovery list-services`
-
 `aws servicediscovery delete-service --id "xxx"`
 
 ## cloudwatch metrics
@@ -14,3 +11,5 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-clou
 ## cloudwatch concepts
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html
 
+## To configure an Amazon SNS topic to use as a target for AWS CodeStar Notifications notification rules
+https://docs.aws.amazon.com/codestar-notifications/latest/userguide/set-up-sns.html
