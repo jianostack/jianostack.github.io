@@ -12,5 +12,7 @@ https://www.tweaked.io/benchmarking/
 https://loadimpact.com/
 
 ## chmod linux permissions
-
 https://chmodcommand.com
+
+## Stackoverflow favourites
+https://stackexchange.com/users/1403042/jianli?tab=favorites
