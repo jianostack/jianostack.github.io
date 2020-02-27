@@ -1,5 +1,11 @@
-## AWS CLI Setup credentials
-`aws configure`
+## Disable Codepipeline auto trigger cloudwatch events for production
+Via console 
+`CloudWatch > Rules > disable`
+
+Via CLI
+`https://serverfault.com/questions/869484/temporarily-disable-aws-codepipeline`
+
+No option to disable Bitbucket (codestar) webhooks connections.
 
 ## AWS CLI Service already exists
 `aws servicediscovery list-services`
@@ -13,3 +19,8 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concep
 
 ## To configure an Amazon SNS topic to use as a target for AWS CodeStar Notifications notification rules
 https://docs.aws.amazon.com/codestar-notifications/latest/userguide/set-up-sns.html
+
+## AWS CLI Setup credentials
+`aws configure`
+
+
