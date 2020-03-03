@@ -1,3 +1,6 @@
+## AWS CLI
+`brew install awscli`
+
 # Cellar on mac
 `/usr/local/Cellar`
 
