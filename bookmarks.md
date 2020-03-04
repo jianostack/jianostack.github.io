@@ -1,3 +1,6 @@
+## Photopea (web photoshop)
+https://www.photopea.com/
+
 ## web scraping
 https://www.parsehub.com/
 
