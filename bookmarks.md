@@ -1,3 +1,18 @@
+## CSS Animations
+https://keyframes.app/
+
+## Time UTC
+http://www.timebie.com/std/utc.php
+
+## AI generated photos
+https://generated.photos/
+
+## Semantic versioning
+https://semver.org/
+
+## Inbox kitten disposable/temp email
+https://inboxkitten.com/
+
 ## Photopea (web photoshop)
 https://www.photopea.com/
 
