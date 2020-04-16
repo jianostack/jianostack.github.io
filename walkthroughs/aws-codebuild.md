@@ -1,34 +1,16 @@
-This guide gets your repository onto CodeCommit, built/pushed onto ECR then finally deployed to ECS. Pheww.
+# AWS continous integration
 
-## 1. CodeCommit
+CodeBuild and CodePipeline.
 
-Originally I started out with Bitbucket as a source but realised later that CodePipeline cannot build with that. Very misleading AWS. So instead choose CodeCommit.
-
-Add your new CodeCommit repo as a remote.
-
-```
-[remote "aws"]
-	url = SSH_URL
-	fetch = +refs/heads/*:refs/remotes/origin/*
-```
-
-To grant access to CodeCommit add your Access Key ID from AWS Console IAM page to `vim ~/.ssh/config`
-
-```
-Host git-codecommit.*.amazonaws.com
-User AWS_ACCOUNT_ID
-IdentityFile ~/.ssh/id_rsa
-```
-
-## IAM user policy
-
-Add this policy to the user:
-
-AWSCodeCommitPowerUser
-
-## 2. CodeBuild
+## CodeBuild
 
 Create a new CodeBuild project.
+
+### Source 
+
+Setup Bitbucket/Github source provider connection and repo.
+
+### Buildspec
 
 Add a buildspec.yml to your repo. Edit the ECR_URI, ECR_TAG and CONTAINER_NAME:
 
@@ -74,7 +56,7 @@ If you create a new service role make sure you attach this policy:
 
 AmazonEC2ContainerRegistryPowerUser
 
-## 3. CodePipeline
+## CodePipeline
 
 The CodePipeline combines the source, build and deploy steps together.
 
