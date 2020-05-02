@@ -1,20 +1,21 @@
-## S3 copy objects to another bucket
+# S3 copy objects to another bucket
 
 `aws s3 sync s3://SOURCE_BUCKET_NAME s3://NEW_BUCKET_NAME`
 
 https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/
 
-## S3 Create a bucket
+# S3 Create a bucket
 While creating the bucket there are two kinds of access, ACL and policies.
 
 ACL deals with Amazon account access and policies cover the rest.
 
 You can skip ACL and policies during creation, just take note of the bucket’s ARN first.
 
-## S3 Create bucket policy
+**S3 Create bucket policy**
+
 Find a policy from [AWS](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html)
 
-## S3 Create IAM user
+**S3 Create IAM user**
 Allow an IAM user to access a bucket.
 
 Below is a version of [this](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-policies-s3.html#iam-policy-ex0) user policy that only allows programmatic access:
@@ -39,7 +40,7 @@ Below is a version of [this](https://docs.aws.amazon.com/AmazonS3/latest/dev/exa
 }
 ```
 
-## Disable Codepipeline auto trigger cloudwatch events for production
+# Disable Codepipeline auto trigger cloudwatch events for production
 Via console 
 `CloudWatch > Rules > disable`
 
@@ -48,20 +49,18 @@ Via CLI
 
 No option to disable Bitbucket (codestar) webhooks connections.
 
-## AWS CLI Service already exists
+# AWS CLI Service already exists
 `aws servicediscovery list-services`
 `aws servicediscovery delete-service --id "xxx"`
 
-## cloudwatch metrics
+# cloudwatch metrics
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html
 
-## cloudwatch concepts
+# cloudwatch concepts
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html
 
-## To configure an Amazon SNS topic to use as a target for AWS CodeStar Notifications notification rules
+# To configure an Amazon SNS topic to use as a target for AWS CodeStar Notifications notification rules
 https://docs.aws.amazon.com/codestar-notifications/latest/userguide/set-up-sns.html
 
-## AWS CLI Setup credentials
+# AWS CLI Setup credentials
 `aws configure`
-
-
