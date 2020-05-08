@@ -4,7 +4,6 @@
 composer dump-autoload
 php artisan config:cache
 php artisan cache:clear
-php artisan config:clear
 ```
 
 ## Refresh database and seed

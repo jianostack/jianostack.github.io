@@ -4,6 +4,10 @@
 
 https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/
 
+# How can I copy S3 objects from another AWS account
+
+https://aws.amazon.com/premiumsupport/knowledge-center/copy-s3-objects-account/
+
 # S3 Create a bucket
 While creating the bucket there are two kinds of access, ACL and policies.
 
