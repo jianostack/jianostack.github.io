@@ -74,16 +74,13 @@ SELECT MD5('notsecret');
 # Convert all tables to innodb
 Copy the output and run as a new SQL query
 
-https://stackoverflow.com/a/9492183
+https://stackoverflow.com/a/30648414/1331456
 
 ```
-SET @DATABASE_NAME = 'name_of_your_db';
-SELECT  CONCAT('ALTER TABLE `', table_name, '` ENGINE=InnoDB;') AS sql_statements
-FROM    information_schema.tables AS tb
-WHERE   table_schema = @DATABASE_NAME
-AND     `ENGINE` = 'MyISAM'
-AND     `TABLE_TYPE` = 'BASE TABLE'
-ORDER BY table_name DESC;
+SELECT CONCAT('ALTER TABLE ',TABLE_NAME,' ENGINE=InnoDB;') 
+FROM INFORMATION_SCHEMA.TABLES
+WHERE ENGINE='MyISAM'
+AND table_schema = 'mydatabase';
 ```
 
 # Out of sync
