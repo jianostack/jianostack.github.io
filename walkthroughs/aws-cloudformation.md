@@ -10,6 +10,7 @@ The Cloudformation doesn't associate a keypair with your EC2. Do the following t
 
 - EC2 > launch configuration
 - Create a new launch configuration by copying an existing one
+- Delete existing launch configuration
 - The keypair association will come after the review
 - change your EC2 > auto scaling groups > edit > launch configuration
 - check your min capicity is 0 and desired capacity is 1
