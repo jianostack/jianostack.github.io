@@ -47,3 +47,9 @@ docker cp mycontainer_id:/foo.txt foo.txt
 
 ### use local DB
 `DB_HOST=host.docker.internal`
+
+# save image to tar
+`docker save -o <path for generated tar file> <image name>`
+
+# load tar image
+`docker load -i <path to image tar file>`
