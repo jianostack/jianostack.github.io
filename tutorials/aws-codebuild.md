@@ -30,7 +30,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:ECR_TAG .
+      - docker build --build-arg APP_KEY=${APP_KEY} -t $REPOSITORY_URI:ECR_TAG .
       - docker tag $REPOSITORY_URI:ECR_TAG $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
