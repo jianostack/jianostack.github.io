@@ -1,4 +1,4 @@
-# AWS continous integration
+# AWS Continous Integration
 
 CodeBuild and CodePipeline.
 
@@ -6,7 +6,7 @@ CodeBuild and CodePipeline.
 
 Create a new CodeBuild project.
 
-### Source 
+### Source
 
 Setup Bitbucket/Github source provider connection and repo.
 
@@ -50,7 +50,7 @@ Make sure the follow flag is checked:
 
 - [x] Enable this flag if you want to build Docker images or want your builds to get elevated privileges
 
-### CodeBuild Service role 
+### CodeBuild Service role
 
 If you create a new service role make sure you attach this policy:
 
