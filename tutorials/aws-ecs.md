@@ -1,5 +1,9 @@
 # Elastic container service tutorial
 
+## Fargate launch type with public subnets
+
+https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/FargateLaunchType/clusters/public-vpc.yml
+
 ## EC2 launch type with public or private subnets
 
 Let's use AWS CloudFormation to deploy a cluster. Choose between the following:
