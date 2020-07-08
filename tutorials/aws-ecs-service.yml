@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  ass-api-dev:
+    image: # repo URI
+    ports:
+      - "3000:3000"
+    env_file: .env_example
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: # group name
+        awslogs-region: # region
+        awslogs-stream-prefix: ecs
