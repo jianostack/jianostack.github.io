@@ -59,6 +59,7 @@ The Cloudformation doesn't associate a keypair with your EC2 instance. Do the fo
 - check your min capicity is 0 and desired capacity is 1
 - instance management > detach
 - a new instance will be launched into to the auto scaling group
+- If a new instance is not appearing in your cluster try manually assigning it an elastic IP address
 
 ### Create subnet issue
 Make sure your default VPC has at least 2 availability zones with default subnets
