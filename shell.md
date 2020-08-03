@@ -1,3 +1,9 @@
+# no more filezilla
+sftp
+
+# hostname
+sudo hostnamectl set-hostname NEW_HOSTNAME
+
 # switch user
 sudo su
 
