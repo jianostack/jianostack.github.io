@@ -1,3 +1,22 @@
+# unattended-upgrades
+
+`sudo apt install unattended-upgrades apt-listchanges bsd-mailx`
+
+`sudo dpkg-reconfigure -plow unattended-upgrades`
+
+`sudo nvim /etc/apt/apt.conf.d/50unattended-upgrades`
+
+Edit the following:
+```
+Unattended-Upgrade::Mail "mail@example.com";
+Unattended-Upgrade::Automatic-Reboot "true";  # this is kind of obvious
+Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
+Unattended-Upgrade::Remove-Unused-Dependencies "true";
+Unattended-Upgrade::Automatic-Reboot-Time "05:00"; 
+```
+
+`sudo unattended-upgrades --dry-run`
+
 # no more filezilla
 sftp
 
@@ -91,13 +110,6 @@ sudo fuser -k Port_Number/tcp
 # who is apache user and group
 ps aux | egrep '(apache|httpd)'
 apache2ctl -t -D DUMP_RUN_CFG
-
-# upgrade
-
-https://askubuntu.com/questions/194/how-can-i-install-just-security-updates-from-the-command-line
-
-`sudo unattended-upgrades -d`
-`sudo reboot`
 
 # host A record
 host -a example.com
