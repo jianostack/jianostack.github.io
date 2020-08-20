@@ -2,14 +2,17 @@
 
 `sudo apt install unattended-upgrades apt-listchanges bsd-mailx`
 
+Internet site
+
 `sudo dpkg-reconfigure -plow unattended-upgrades`
 
-`sudo nvim /etc/apt/apt.conf.d/50unattended-upgrades`
+`sudo vim /etc/apt/apt.conf.d/50unattended-upgrades`
 
 Edit the following:
 ```
 Unattended-Upgrade::Mail "mail@example.com";
-Unattended-Upgrade::Automatic-Reboot "true";  # this is kind of obvious
+Unattended-Upgrade::MailOnlyOnError "true";
+Unattended-Upgrade::Automatic-Reboot "true"; 
 Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
 Unattended-Upgrade::Remove-Unused-Dependencies "true";
 Unattended-Upgrade::Automatic-Reboot-Time "05:00"; 
