@@ -1,13 +1,8 @@
 # unattended-upgrades Ubuntu
-
+Choose Internet Site
 `sudo apt install unattended-upgrades apt-listchanges bsd-mailx`
-
-Internet site
-
 `sudo dpkg-reconfigure -plow unattended-upgrades`
-
 `sudo vim /etc/apt/apt.conf.d/50unattended-upgrades`
-
 Edit the following:
 ```
 Unattended-Upgrade::Mail "mail@example.com";
@@ -17,11 +12,10 @@ Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
 Unattended-Upgrade::Remove-Unused-Dependencies "true";
 Unattended-Upgrade::Automatic-Reboot-Time "05:00"; 
 ```
-
 `sudo unattended-upgrades --dry-run`
 
 # Live Patching in Amazon Linux 2 
-### Setup
+###` Setup
 ```
 sudo yum install -y yum-plugin-kernel-livepatch
 sudo yum kernel-livepatch enable -y
