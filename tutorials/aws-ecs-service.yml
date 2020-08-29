@@ -2,8 +2,8 @@ version: "3"
 
 services:
 
-  ass-api-dev:
-    image: # repo URI
+  service-name-dev:
+    image: # repositoryurl:tag
     ports:
       - "3000:3000"
     env_file: .env_example
