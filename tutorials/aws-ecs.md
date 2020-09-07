@@ -22,8 +22,8 @@ Check target group and health check port is the same as the container port.
 ### ecs-cli service create
 This will create our services and tasks. Before you do this you will need these three files:
 
-- [ecs-service.yml](aws-ecs-service.yml)
-- [ecs-params.yml](aws-ecs-params.yml)
+- [ecs-service.yml](ecs-service.yml)
+- [ecs-params.yml](ecs-params.yml)
 - .env_example
 
 `ecs-cli compose --project-name string --file ecs-service.yml service create --create-log-groups --tags project=string --cluster string --launch-type FARGATE --target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" --health-check-grace-period 30`
