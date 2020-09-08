@@ -41,7 +41,7 @@ Sets the desired task count to 1.
 
 `ecs-cli compose --project-name string --file ecs-service.yml service start --cluster string`
 
-# ecs-cli compose service up 
+### ecs-cli compose service up 
 Create and start the service. Also used to update.
 
 `ecs-cli compose --project-name string --file ecs-service.yml service up --cluster string`
