@@ -9,6 +9,14 @@ I recommend Fargate with public subnets. Use CloudFormation to spin up the VPC, 
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/FargateLaunchType/clusters/public-vpc.yml
 
+# ECR 
+
+Create a repo in ECR and grab the URI.
+
+# CodeBuild
+
+Create a build project and complete the initial build so it can push to ECR.
+
 ## ECS services, tasks and target groups
 Setup your ecs-cli first.
 
