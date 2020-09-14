@@ -29,24 +29,27 @@ Target type is IP.
 
 Check target group and health check port is the same as the container port. 
 
-### ecs-cli service create
-This will create our services and tasks. Before you do this you will need these three files:
+### ecs-cli compose service 
+To use this cli you will need these three files:
 
 - [ecs-service.yml](ecs-service.yml)
 - [ecs-params.yml](ecs-params.yml)
 - .env_example
 
-`ecs-cli compose --project-name string --file ecs-service.yml service create --create-log-groups --tags project=string --cluster string --launch-type FARGATE --target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" --health-check-grace-period 30`
+### create
+This will create our task definition.
+
+`ecs-cli compose --project-name string --ecs-params ecs-params.yml --file ecs-service.yml service create --create-log-groups --tags project=string --cluster string --launch-type FARGATE --target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" --health-check-grace-period 30`
 
 ### ecs-cli compose service start 
 Sets the desired task count to 1.
 
-`ecs-cli compose --project-name string --file ecs-service.yml service start --cluster string`
+`ecs-cli compose --project-name string --ecs-params ecs-params.yml --file ecs-service.yml service start --cluster string`
 
 ### ecs-cli compose service up 
 Create and start the service. Also used to update.
 
-`ecs-cli compose --project-name string --file ecs-service.yml service up --cluster string`
+`ecs-cli compose --project-name string --ecs-params ecs-params.yml --file ecs-service.yml service up --cluster string`
 
 ## CodePipeline
 
