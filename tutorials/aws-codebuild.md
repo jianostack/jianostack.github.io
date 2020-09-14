@@ -56,12 +56,6 @@ If you create a new service role make sure you attach this policy:
 
 AmazonEC2ContainerRegistryPowerUser
 
-## CodePipeline
-
-The CodePipeline combines the source, build and deploy steps together.
-
-Create your ECS task definition and service before starting a CodePipeline.
-
 ## References
 
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cd-pipeline.html

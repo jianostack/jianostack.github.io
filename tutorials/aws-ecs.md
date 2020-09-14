@@ -13,9 +13,11 @@ https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services
 
 Create a repo in ECR and grab the URI.
 
-# CodeBuild
+# CodeBuild 
 
 Create a build project and complete the initial build so it can push to ECR.
+
+More steps found [here](aws-codebuild.md).
 
 ## ECS services, tasks and target groups
 Setup your ecs-cli first.
@@ -46,13 +48,13 @@ Create and start the service. Also used to update.
 
 `ecs-cli compose --project-name string --file ecs-service.yml service up --cluster string`
 
-## Continous integration
+## CodePipeline
 
-Head over to [here](aws-ci.md) and follow the instructions to link a code source to a container build and then deploy it to the cluster.
+Create your CodePipeline for each environment.
 
-## DB
+## RDS
 
-## ACM
+Create RDS in the same VPC.
 
 ---
 
