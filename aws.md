@@ -19,7 +19,3 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concep
 
 # To configure an Amazon SNS topic to use as a target for AWS CodeStar Notifications notification rules
 https://docs.aws.amazon.com/codestar-notifications/latest/userguide/set-up-sns.html
-
-# ECS update service
-
-`aws ecs update-service --cluster cluster-name --service my-http-service --task-definition amazon-ecs-sample:latest`
