@@ -51,6 +51,34 @@ Create and start the service. Also used to update.
 
 `ecs-cli compose --project-name string --ecs-params ecs-params.yml --file ecs-service.yml service up --cluster string`
 
+### autoscaling register-scalable-target
+```
+aws application-autoscaling register-scalable-target \
+--service-namespace ecs \
+--scalable-dimension ecs:service:DesiredCount \
+--resource-id service/cluster-name/service-name \
+--min-capacity 1 \
+--max-capacity 10
+```
+
+### autoscaling put-scaling-policy CPU
+```
+aws application-autoscaling put-scaling-policy --service-namespace ecs \
+--scalable-dimension ecs:service:DesiredCount \
+--resource-id service/cluster-name/service-name \
+--policy-name cpu-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
+--target-tracking-scaling-policy-configuration file://ecs-cpu-policy.json
+```
+
+### autoscaling put-scaling-policy memory
+```
+aws application-autoscaling put-scaling-policy --service-namespace ecs \
+--scalable-dimension ecs:service:DesiredCount \
+--resource-id service/cluster-name/service-name \
+--policy-name memory-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
+--target-tracking-scaling-policy-configuration file://ecs-memory-policy.json
+```
+
 ## CodePipeline
 
 Create your CodePipeline for each environment.
