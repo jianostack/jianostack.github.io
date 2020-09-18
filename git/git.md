@@ -64,7 +64,4 @@ git merge A
 `git commit --amend`
 
 ## git log
-`git log --oneline --graph --color --all --decorate`
-
-## git tree
-`gitk --all`
+`git log --graph --oneline --all`
