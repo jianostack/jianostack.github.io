@@ -36,7 +36,7 @@ To use this cli you will need these three files:
 - [ecs-params.yml](ecs-params.yml)
 - .env_example
 
-### create
+### ecs-cli compose service create
 This will create our task definition.
 
 `ecs-cli compose --project-name string --ecs-params ecs-params.yml --file ecs-service.yml service create --create-log-groups --tags project=string --cluster string --launch-type FARGATE --target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" --health-check-grace-period 30`
