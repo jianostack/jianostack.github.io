@@ -8,8 +8,6 @@ Edit the following:
 Unattended-Upgrade::Mail "mail@example.com";
 Unattended-Upgrade::MailOnlyOnError "true";
 Unattended-Upgrade::Automatic-Reboot "true"; 
-Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
-Unattended-Upgrade::Remove-Unused-Dependencies "true";
 Unattended-Upgrade::Automatic-Reboot-Time "05:00"; 
 ```
 `sudo unattended-upgrades --dry-run`
