@@ -1,19 +1,32 @@
-# unattended-upgrades Ubuntu
-Choose Internet Site
+# Unattended-upgrades Ubuntu
+
+Choose internet site and enter the email you want to send with:
+
 `sudo apt install unattended-upgrades apt-listchanges bsd-mailx`
+
+Enable:
+
 `sudo dpkg-reconfigure -plow unattended-upgrades`
+
+Edit the config file:
+
 `sudo vim /etc/apt/apt.conf.d/50unattended-upgrades`
-Edit the following:
+
 ```
 Unattended-Upgrade::Mail "mail@example.com";
 Unattended-Upgrade::MailOnlyOnError "true";
 Unattended-Upgrade::Automatic-Reboot "true"; 
 Unattended-Upgrade::Automatic-Reboot-Time "05:00"; 
 ```
+
+Dry run:
+
 `sudo unattended-upgrades --dry-run`
 
 # Live Patching in Amazon Linux 2 
-###` Setup
+
+Setup:
+
 ```
 sudo yum install -y yum-plugin-kernel-livepatch
 sudo yum kernel-livepatch enable -y
@@ -25,39 +38,41 @@ sudo yum update --security
 kpatch list
 yum kernel-livepatch supported
 ```
-### Reboot 
+
+Reboot :
 After 3 months we still need to reboot.
 ```
 sudo reboot
 yum kernel-livepatch supported
 ```
+
 https://aws.amazon.com/amazon-linux-2/faqs/
 
-# no more filezilla
+# No more filezilla
 sftp
 
-# hostname
+# Hostname
 sudo hostnamectl set-hostname NEW_HOSTNAME
 
-# switch user
+# Switch user
 sudo su
 
-# use user
+# Use user
 sudo -u username
 
-# newuser
+# Add user
 sudo adduser
 
-# deluser
+# Del user
 sudo deluser
 
-# reset user pw
+# Reset user pw
 sudo passwd
 
-# find apt-get processes
+# Find apt-get processes
 ps aux | grep apt
 
-# kill process
+# Kill process
 kill processnumber
 
 kill -9 processnumber
