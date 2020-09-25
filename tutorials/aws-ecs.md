@@ -1,4 +1,4 @@
-# Elastic container service tutorial
+# Elastic container service deployment
 
 ## Launch type and subnets
 First off choose your launch type. EC2 is seen as old faithful with a more manual setup yet with greater control. Fargate is the new kid on the block with AWS managing the servers for you, all that automation comes at a price though.
