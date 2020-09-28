@@ -64,4 +64,4 @@ git merge A
 `git commit --amend`
 
 ## git log
-`git log --graph --oneline --all`
+`git log --stat --graph --all`
