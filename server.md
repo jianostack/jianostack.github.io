@@ -42,6 +42,7 @@ yum kernel-livepatch supported
 Reboot :
 After 3 months we still need to reboot.
 ```
+sudo yum install -y kernel
 sudo reboot
 yum kernel-livepatch supported
 ```
