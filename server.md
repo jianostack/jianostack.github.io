@@ -1,3 +1,7 @@
+# find file in linux
+
+`find / -name httpd.conf 2>/dev/null`
+
 # Unattended-upgrades Ubuntu
 
 Choose internet site and enter the email you want to send with:

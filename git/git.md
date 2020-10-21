@@ -1,3 +1,9 @@
+## remove remote branch
+
+`git push <remote> --delete <branch>`
+
+`git fetch -p`
+
 ## No you are NOT Already up-to-date.
 git fetch --all
 
