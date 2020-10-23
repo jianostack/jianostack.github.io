@@ -1,3 +1,6 @@
+## git log
+`git log --stat --graph --all`
+
 ## remove remote branch
 
 `git push <remote> --delete <branch>`
@@ -69,5 +72,3 @@ git merge A
 ## Amend commit message
 `git commit --amend`
 
-## git log
-`git log --stat --graph --all`
