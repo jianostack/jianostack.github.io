@@ -20,5 +20,3 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concep
 # To configure an Amazon SNS topic to use as a target for AWS CodeStar Notifications notification rules
 https://docs.aws.amazon.com/codestar-notifications/latest/userguide/set-up-sns.html
 
-## test cloudformation template
-aws cloudformation validate-template --template-body file:///Users/yowpowwow/
