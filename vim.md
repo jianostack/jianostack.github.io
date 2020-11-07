@@ -6,3 +6,6 @@
 
 ## CtrlP file finder https://kien.github.io/ctrlp.vim/
 `:CtrlP`
+
+## netrw help quickmap reference
+`help netrw`
