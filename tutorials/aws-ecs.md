@@ -11,6 +11,12 @@ I recommend Fargate with public subnets. Use CloudFormation to spin up the VPC, 
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/FargateLaunchType/clusters/public-vpc.yml
 
+EC2 launch type with public subnet is appropriate when the IP address of the EC2 is needed.
+
+https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/ECS/EC2LaunchType/clusters/public-vpc.yml
+
+
+
 # ECR
 
 Create a repo in ECR and grab the URI.
