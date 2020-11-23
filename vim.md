@@ -6,9 +6,6 @@
 ## cycle through window panes
 `crtl+W`
 
-## CtrlP file finder https://kien.github.io/ctrlp.vim/
-`:CtrlP`
-
 ## netrw help quickmap reference
 `help netrw`
 
@@ -26,3 +23,5 @@
 
 ## end of file
 shift+G
+
+
