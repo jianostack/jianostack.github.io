@@ -12,7 +12,9 @@ Setup Bitbucket/Github source provider connection and repo.
 
 ### Buildspec
 
-Add a buildspec.yml to your repo. Edit the ECR_URI, ECR_TAG and CONTAINER_NAME:
+Add a buildspec.yml to your repo. 
+
+Go to AWS console Codebuild > Environments and add variables.
 
 ```
 version: 0.2
