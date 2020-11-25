@@ -25,7 +25,7 @@ Create a repo in ECR and grab the URI.
 
 Create a build project and complete the initial build so it can push to ECR.
 
-More steps found [here](aws-continious-integration.md).
+More steps found [here](aws-continous-integration.md).
 
 ## ECS services, tasks and target groups
 Setup your ecs-cli first.
