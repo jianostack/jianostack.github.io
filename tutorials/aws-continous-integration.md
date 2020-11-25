@@ -23,6 +23,8 @@ env:
   variables:
     REPOSITORY_TAG: $REPOSITORY_TAG
     REPOSITORY_URI: $REPOSITORY_URI
+    DOCKER_USER: $DOCKER_USER
+    DOCKER_PASS: $DOCKER_PASS
 
 phases:
   pre_build:
@@ -36,6 +38,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - docker login --username $DOCKER_USER -p $DOCKER_PASS
       - docker build -t $REPOSITORY_URI:$REPOSITORY_TAG .
       - docker tag $REPOSITORY_URI:$REPOSITORY_TAG $REPOSITORY_URI:$IMAGE_TAG
   post_build:
