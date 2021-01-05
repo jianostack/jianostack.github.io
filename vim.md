@@ -24,4 +24,5 @@
 ## end of file
 shift+G
 
-
+## delete line
+Shift+D
