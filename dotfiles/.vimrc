@@ -17,7 +17,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 
 call plug#end()
@@ -34,7 +33,7 @@ let mapleader = " "
 let g:netrw_banner = 0
 let g:ctrlp_use_caching = 0
 
-noremap d "_d
+nnoremap d "_d
 vnoremap d "_d
 
 set laststatus=2
