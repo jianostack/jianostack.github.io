@@ -1,3 +1,13 @@
+## pull and push all branches to new remote
+
+Do this on a fresh clone:
+
+```
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+git fetch --all
+git pull --all
+```
+
 ## git log
 `git log --stat --graph --all`
 
