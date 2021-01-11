@@ -1,4 +1,8 @@
-# Visual mode IMproved
+## Install rip grep
+
+`brew install ripgrep`
+
+Then include plug in .vimrc
 
 ## select all lines and delete
 `:%d`
