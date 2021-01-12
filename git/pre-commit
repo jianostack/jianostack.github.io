@@ -1,6 +1,0 @@
-#!/bin/sh
-
-GZIP=/Users/homeuser/Sites/project/wp-content/mysql/mysql.gz
-
-mysqldump -uroot -proot fcfer_dev | /usr/bin/gzip > $GZIP
-git add $GZIP
