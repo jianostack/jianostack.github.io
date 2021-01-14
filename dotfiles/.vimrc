@@ -1,3 +1,4 @@
+
 syntax on
 
 set clipboard=unnamed
@@ -40,12 +41,12 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let mapleader = " "
 let g:netrw_banner = 0
 let g:ctrlp_use_caching = 0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
 nnoremap d "_d
 vnoremap d "_d
