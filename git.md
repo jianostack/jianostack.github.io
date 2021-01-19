@@ -25,9 +25,6 @@ git pull --all
 ## reset a file
 git checkout filename
 
-## Resets the index and working tree.
-git reset --hard af64315
-
 ## Merge conflicts
 git mergetool
 
