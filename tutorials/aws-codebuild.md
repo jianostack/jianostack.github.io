@@ -1,8 +1,4 @@
-# AWS Continous Integration
-
-CodeBuild and CodePipeline.
-
-## CodeBuild
+# AWS CodeBuild 
 
 Create a new CodeBuild project.
 
