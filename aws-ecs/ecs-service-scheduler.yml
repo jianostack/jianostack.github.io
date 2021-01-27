@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  service-name-dev-scheduler:
+    image: # repositoryurl:tag
+    env_file: .env_example
+    environment:
+      CONTAINER_ROLE: scheduler
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: # group name
+        awslogs-region: ap-southeast-1
+        awslogs-stream-prefix: ecs
