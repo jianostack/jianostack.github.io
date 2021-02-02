@@ -11,6 +11,7 @@ Do this on a fresh clone:
 git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
 git fetch --all
 git pull --all
+git push --all github
 ```
 
 ## git log
