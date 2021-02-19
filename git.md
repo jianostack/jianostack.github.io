@@ -1,3 +1,7 @@
+## remove that large file
+
+`git filter-branch --tree-filter 'rm -f DVD-rip' HEAD`
+
 ## file history
 
 `git log --follow -p path-to-file `
