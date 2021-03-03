@@ -1,3 +1,7 @@
+## Vertical split pane
+
+`vsplit`
+
 ## Install rip grep
 
 `brew install ripgrep`
