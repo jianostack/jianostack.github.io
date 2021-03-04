@@ -1,3 +1,6 @@
+## new file in netrw
+`%`
+
 ## Vertical split pane
 
 `vsplit`
