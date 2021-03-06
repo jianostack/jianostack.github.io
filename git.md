@@ -1,4 +1,11 @@
-## remove that large file
+## migrate large files to git lfs
+
+```
+git lfs migrate info
+git lfs migrate import
+```
+
+## remove that large file from history
 
 `git filter-branch --tree-filter 'rm -f DVD-rip' HEAD`
 
