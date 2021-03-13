@@ -92,9 +92,6 @@ rpm -qlp telnet-server-1.2-137.1.i586.rpm
 # rpmbuild from tarballs
 rpmbuild -tb httpd-2.4.x.tar.bz2
 
-# rsync symlinks
-rsync -avzP
-
 # rsync source to destination
 rsync -arzP /source/directory user@host:/target/directory
 
