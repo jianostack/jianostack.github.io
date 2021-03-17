@@ -1,3 +1,6 @@
+## auto indent
+`gg=G`
+
 ## new file in netrw
 `%`
 
