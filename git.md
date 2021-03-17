@@ -7,7 +7,7 @@ git lfs migrate import
 
 ## remove that large file from history
 
-`git filter-branch --tree-filter 'rm -f DVD-rip' HEAD`
+`git filter-branch --tree-filter 'rm -f DVD-rip' HEAD --all`
 
 ## file history
 
