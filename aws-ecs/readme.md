@@ -1,8 +1,9 @@
 # Elastic container service
 
-This tutorial goes through how to get a development, staging or production environment ready for use on AWS.
+ECS, RDS, Elastic cache and CodePipeline setup. I use it for PHP or  NodeJS stacks.
 
 ## Creating the VPC and Cluster
+
 First off choose your launch type. EC2 is seen as old faithful with a more manual setup yet with greater control. Fargate is the new kid on the block with AWS managing the servers for you, all that automation comes at a price though.
 
 Next is public vs private subnets. Public is easier to config but not as secure. Private is more secure but with a harder setup and heavier price tag.
@@ -14,7 +15,6 @@ https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services
 EC2 launch type with public subnet is appropriate when the IP address of the EC2 is needed.
 
 https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/ECS/EC2LaunchType/clusters/public-vpc.yml
-
 
 
 # ECR
@@ -90,6 +90,12 @@ Create your CodePipeline for each environment.
 ## RDS
 
 Create RDS in the same VPC.
+
+## Elastic cache
+
+To save costs for development and staging do not provision a redis cluster. Instead use file caching. 
+
+For production provision a redis cluster with two t2 micro nodes. 
 
 ---
 
