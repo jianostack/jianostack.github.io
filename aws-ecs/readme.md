@@ -4,7 +4,7 @@ ECS, RDS, Elastic cache and CodePipeline setup. I use it for PHP or  NodeJS stac
 
 ## Creating the VPC and Cluster
 
-First off choose your launch type. EC2 is seen as old faithful with a more manual setup yet with greater control. Fargate is the new kid on the block with AWS managing the servers for you, all that automation comes at a price though.
+First off choose your launch type. EC2 launch type allows greater control but you need to manage your EC2 instances. Fargate launch type manages your servers for you.
 
 Next is public vs private subnets. Public is easier to config but not as secure. Private is more secure but with a harder setup and heavier price tag.
 
