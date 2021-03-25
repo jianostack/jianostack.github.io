@@ -1,3 +1,6 @@
+## delete in netrw
+Shift + D
+
 ## indent
 `visual > or <` 
 
