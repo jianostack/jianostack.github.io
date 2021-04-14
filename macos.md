@@ -2,10 +2,7 @@
 `sudo systemsetup -gettimezone`
 
 # MACOS hidden files
-```
-defaults write com.apple.finder AppleShowAllFiles TRUE
-killall Finder
-```
+`cmd+shift+.`
 
 # MACOS clear DNS cache 
 `sudo killall -HUP mDNSResponder`

@@ -33,7 +33,7 @@ Create a build project and complete the initial build so it can push to ECR.
 
 ### buildspec.yml
 
-Add a buildspec.yml to your repo. 
+Add a buildspec.yml to your repo.
 
 Go to AWS console Codebuild > Environments and add variables.
 
@@ -123,7 +123,8 @@ aws application-autoscaling register-scalable-target \
 --scalable-dimension ecs:service:DesiredCount \
 --resource-id service/cluster-name/service-name \
 --min-capacity 1 \
---max-capacity 10
+--max-capacity 10 \
+--profile profile-name
 ```
 
 ### autoscaling put-scaling-policy CPU
@@ -132,7 +133,8 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --scalable-dimension ecs:service:DesiredCount \
 --resource-id service/cluster-name/service-name \
 --policy-name cpu-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
---target-tracking-scaling-policy-configuration file://ecs-cpu-policy.json
+--target-tracking-scaling-policy-configuration file://ecs-cpu-policy.json \
+--profile profile-name
 ```
 
 ### autoscaling put-scaling-policy memory
@@ -141,7 +143,8 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --scalable-dimension ecs:service:DesiredCount \
 --resource-id service/cluster-name/service-name \
 --policy-name memory-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
---target-tracking-scaling-policy-configuration file://ecs-memory-policy.json
+--target-tracking-scaling-policy-configuration file://ecs-memory-policy.json \
+--profile profile-name
 ```
 
 ## CodePipeline
@@ -154,9 +157,9 @@ Create RDS in the same VPC.
 
 ## Elastic cache
 
-To save costs for development and staging do not provision a redis cluster. Instead use file caching. 
+To save costs for development and staging do not provision a redis cluster. Instead use file caching.
 
-For production provision a redis cluster with two t2 micro nodes. 
+For production provision a redis cluster with two t2 micro nodes.
 
 ---
 
