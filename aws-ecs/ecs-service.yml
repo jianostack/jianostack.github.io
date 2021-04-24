@@ -2,14 +2,14 @@ version: "3"
 
 services:
 
-  service-name-dev:
+  container-name:
     image: # repositoryurl:tag
     ports:
       - "3000:3000"
     env_file: .env_example
     logging:
       driver: awslogs
-      options: 
+      options:
         awslogs-group: # group name
         awslogs-region: ap-southeast-1
         awslogs-stream-prefix: ecs
