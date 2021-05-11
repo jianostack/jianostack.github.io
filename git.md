@@ -50,17 +50,10 @@ git diff commit1 commit2
 git blame [file]
 
 ## List all branches verbose
-git branch -av
+`git branch -av`
 
 ## Switch branch
-git checkout my_branch
-
-## Merge branch_a into branch_b
-git fetch --all
-
-git checkout branch_a
-
-git merge branch_b
+`git checkout my_branch`
 
 ## pre-commit script
 
@@ -71,21 +64,10 @@ GZIP=/Users/homeuser/Sites/project/wp-content/mysql/mysql.gz
 
 mysqldump -uroot -proot fcfer_dev | /usr/bin/gzip > $GZIP
 git add $GZIP
-``` 
+```
 
 ## pre-commit
 `chmod a+x pre-commit`
-
-
-## force merge
-I don’t care if there is any other conflict. My branch A will win. Always
-
-```
-git checkout A
-git merge -s ours master
-git checkout master
-git merge A
-```
 
 ## Amend commit message
 `git commit --amend`
