@@ -2,54 +2,56 @@
 
 `docker image prune -a`
 
-### build
+## build
 `docker build -t image_name:image_tag_optional path_to_dockerfile`
 
-### run
+## run
 `docker run --env-file .env -p host_port:container_port image_name:image_tag_optional`
 
 `docker run --env DB_HOST=host.docker.internal --env DB_PORT=3306 -p 5000:80 koi-api`
 
-### list active containers
+## list active containers
 `docker ps`
 
-### stats
+## stats
 `docker stats`
 
-### remove all stopped containers
+## remove all stopped containers
 `docker rm $(docker ps -a -q)`
 
-### run commands
+## run commands
 docker exec -it <container_id> ash
 
 docker exec -it <container_id> bash
 
-### logs
+## logs
 docker logs <container_id> | head
 
-### stats
+## stats
 docker stats <container_id_1>
-
-### docker kill all
+## docker kill all
 `docker kill $(docker ps -q)`
 
 ### remove images
 docker rmi image_id
 
-### copy file
+## copy file
 docker cp mycontainer_id:/foo.txt foo.txt
 
-### volume
+## volume
 
 `docker volume create volumename`
 
 `docker run -p 8080:80 --env-file .env -v volumename:/var/www/html buildname`
 
-### use local DB
+## use local DB
 `DB_HOST=host.docker.internal`
 
-# save image to tar
+## save image to tar
 `docker save -o <path for generated tar file> <image name>`
 
-# load tar image
+## load tar image
 `docker load -i <path to image tar file>`
+
+## remove all images
+`docker rmi $(docker images -a)`
