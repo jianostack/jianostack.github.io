@@ -1,3 +1,5 @@
+# AWS CLI
+
 ## Live Patching in Amazon Linux 2
 
 Setup:
@@ -33,3 +35,5 @@ https://aws.amazon.com/amazon-linux-2/faqs/
 You can use a Lambda function in one AWS account to subscribe to an Amazon SNS topic in a separate AWS account.
 
 https://docs.aws.amazon.com/en_us/lambda/latest/dg/with-sns-example.html
+
+## Profiles
