@@ -11,14 +11,7 @@ Shift + D
 `%`
 
 ## Vertical split pane
-
 `vsplit`
-
-## Install rip grep
-
-`brew install ripgrep`
-
-Then include plug in .vimrc
 
 ## select all lines and delete
 `:%d`
@@ -32,12 +25,6 @@ Then include plug in .vimrc
 ## search and replace
 `:%s/search/replace/g`
 
-## search files with ctrlp plugin
-:CtrlP
-
-## search word with rip grep plugin
-:Rg
-
 ## tabnew
 :tabnew 
 
@@ -46,3 +33,11 @@ shift+G
 
 ## delete line
 Shift+D
+
+## select word
+viw
+
+## recent file 
+ctrl p f
+
+
