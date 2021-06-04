@@ -26,7 +26,7 @@ git push --all github
 ```
 
 ## git log
-`git log --stat --graph --all`
+`git log --pretty=oneline --graph --all`
 
 ## remove remote branch
 
