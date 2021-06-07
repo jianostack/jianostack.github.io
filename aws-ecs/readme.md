@@ -69,13 +69,29 @@ To use this cli you will need these three files:
 ### ecs-cli compose service create
 This will create our task definition.
 
-`ecs-cli compose --project-name project-name-is-ecs-service-name --ecs-params ecs-params.yml --file ecs-service.yml service create --create-log-groups --tags project=string --cluster string --launch-type FARGATE --target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" --health-check-grace-period 30 --aws-profile profile-name`
+ecs-cli compose --project-name project-name-is-ecs-service-name \
+--ecs-params ecs-params.yml \
+--file ecs-service.yml \
+service create \
+--create-log-groups 
+--tags project=string \
+--cluster string \
+--launch-type FARGATE \
+--target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" \
+--health-check-grace-period 30 \
+--aws-profile profile-name
 
 
 ### ecs-cli compose service up
 Create and start the service. Also used to update.
 
-`ecs-cli compose --project-name project-name-is-ecs-service-name --ecs-params ecs-params.yml --file ecs-service.yml service up --cluster string --tags project=name --aws-profile profile-name`
+ecs-cli compose --project-name project-name-is-ecs-service-name \
+--ecs-params ecs-params.yml \
+--file ecs-service.yml \
+service up \
+--cluster string \
+--tags project=name \
+--aws-profile profile-name
 
 ### autoscaling register-scalable-target
 ```
