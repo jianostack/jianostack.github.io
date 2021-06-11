@@ -1,6 +1,6 @@
 # S3 copy objects to another bucket
 
-`aws s3 sync s3://SOURCE_BUCKET_NAME s3://NEW_BUCKET_NAME`
+`aws s3 sync s3://SOURCE_BUCKET_NAME s3://NEW_BUCKET_NAME --acl bucket-owner-full-control`
 
 https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/
 
