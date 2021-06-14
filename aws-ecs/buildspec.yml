@@ -32,5 +32,7 @@ phases:
       - printf '[{"name":"container-name","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
-
-
+cache:
+  paths:
+    - '/root/.yarn-cache/**/*'
+    - 'node_modules/**/*'
