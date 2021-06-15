@@ -73,7 +73,7 @@ ecs-cli compose --project-name project-name-is-ecs-service-name \
 --ecs-params ecs-params.yml \
 --file ecs-service.yml \
 service create \
---create-log-groups 
+--create-log-groups \
 --tags project=string \
 --cluster string \
 --launch-type FARGATE \
