@@ -42,3 +42,9 @@ term
 
 ## vertical split pane
 vsp
+
+## code formatting
+shift-v to visually highlight
+= to format code
+
+
