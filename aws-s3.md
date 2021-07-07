@@ -6,6 +6,8 @@ https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/
 
 # How can I copy S3 objects from another AWS account
 
+`aws s3 cp s3://source-DOC-EXAMPLE-BUCKET/object.txt s3://destination-DOC-EXAMPLE-BUCKET/object.txt --acl bucket-owner-full-control --recursive`
+
 https://aws.amazon.com/premiumsupport/knowledge-center/copy-s3-objects-account/
 
 # S3 Create a bucket
