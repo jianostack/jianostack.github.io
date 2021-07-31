@@ -26,7 +26,7 @@ git push --all github
 ```
 
 ## git log
-`git log --pretty=oneline --graph --all`
+`git log --oneline --graph --all`
 
 ## remove remote branch
 
@@ -34,8 +34,6 @@ git push --all github
 
 `git fetch -p`
 
-## reset a file
-git checkout filename
 
 ## Merge conflicts
 git mergetool
@@ -71,4 +69,6 @@ git add $GZIP
 
 ## Amend commit message
 `git commit --amend`
-
+ 
+## revert a file
+git checkout [commit ID] -- path/to/file
