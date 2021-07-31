@@ -10,9 +10,6 @@ Shift + D
 ## new file in netrw
 `%`
 
-## Vertical split pane
-`vsplit`
-
 ## select all lines and delete
 `:%d`
 
@@ -39,5 +36,15 @@ viw
 
 ## recent file 
 ctrl p f
+
+## terminal in window
+term
+
+## vertical split pane
+vsp
+
+## code formatting
+shift-v to visually highlight
+= to format code
 
 
