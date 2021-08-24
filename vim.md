@@ -47,4 +47,5 @@ vsp
 shift-v to visually highlight
 = to format code
 
-
+## terminal
+:term
