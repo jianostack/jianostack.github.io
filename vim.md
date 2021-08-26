@@ -49,3 +49,7 @@ shift-v to visually highlight
 
 ## terminal
 :term
+
+## wrap
+:set wrap
+:set nowrap
