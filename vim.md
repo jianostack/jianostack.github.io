@@ -23,33 +23,37 @@ Shift + D
 `:%s/search/replace/g`
 
 ## tabnew
-:tabnew 
+`:tabnew` 
 
 ## end of file
-shift+G
+`shift+G`
 
 ## delete line
-Shift+D
+`Shift+D`
 
 ## select word
-viw
+`viw`
 
 ## recent file 
-ctrl p f
+`ctrl+p`
 
 ## terminal in window
-term
+`term`
 
 ## vertical split pane
-vsp
+`vsp`
 
 ## code formatting
 shift-v to visually highlight
+
 = to format code
 
 ## terminal
-:term
+`:term`
 
 ## wrap
 :set wrap
 :set nowrap
+
+## fzf search ignored files
+ctrl+t
