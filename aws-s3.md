@@ -48,33 +48,5 @@ Below is a version of [this](https://docs.aws.amazon.com/AmazonS3/latest/dev/exa
 }
 ```
 
-# bucket url format
 
-https://s3-ap-southeast-1.amazonaws.com/bucket-name
 
-# CORS
-
-```
-[
-    {
-        "AllowedHeaders": [],
-        "AllowedMethods": [
-            "GET"
-        ],
-        "AllowedOrigins": [
-            "http://domain.com"
-        ],
-        "ExposeHeaders": []
-    },
-    {
-        "AllowedHeaders": [],
-        "AllowedMethods": [
-            "GET"
-        ],
-        "AllowedOrigins": [
-            "https://domain.com"
-        ],
-        "ExposeHeaders": []
-    }
-]
-```
