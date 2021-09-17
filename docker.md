@@ -27,8 +27,9 @@ docker logs <container_id> | head
 
 ## stats
 docker stats <container_id_1>
+
 ## docker kill all
-`docker kill $(docker ps -q)`
+docker kill $(docker ps -q)
 
 ### remove images
 docker rmi image_id
