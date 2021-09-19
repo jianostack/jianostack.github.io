@@ -161,3 +161,8 @@ ln -s /full/source/path/wp-content /full/link/path/wordpress
 
 # age of system
 tune2fs -l /dev/sda1 | grep created
+
+# process id of
+pidof name-of-process
+
+
