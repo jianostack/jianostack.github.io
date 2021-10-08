@@ -165,4 +165,5 @@ tune2fs -l /dev/sda1 | grep created
 # process id of
 pidof name-of-process
 
-
+## DNS information groper
+dig 
