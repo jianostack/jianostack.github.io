@@ -1,4 +1,3 @@
-
 syntax on
 
 set clipboard=unnamed
@@ -18,12 +17,15 @@ set list
 
 let mapleader = " "
 let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 3
+let g:netrw_altv = 1
+" let g:netrw_winsize = 25
 
 call plug#begin()
 Plug 'neovim/nvim-lspconfig'  " language server protocol
 Plug 'nvim-lua/plenary.nvim'  " telescope
 Plug 'nvim-telescope/telescope.nvim'  " telescope
-Plug 'kyazdani42/nvim-tree.lua'  " file explorer
 Plug 'hoob3rt/lualine.nvim'  " status line
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
