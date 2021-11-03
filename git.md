@@ -72,3 +72,7 @@ git add $GZIP
  
 ## revert a file
 git checkout [commit ID] -- path/to/file
+
+## files changed in a commit
+git show --name-only [commit]
+
