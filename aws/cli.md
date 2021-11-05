@@ -36,4 +36,3 @@ You can use a Lambda function in one AWS account to subscribe to an Amazon SNS t
 
 https://docs.aws.amazon.com/en_us/lambda/latest/dg/with-sns-example.html
 
-## Profiles
