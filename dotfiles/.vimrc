@@ -1,3 +1,4 @@
+
 syntax on
 
 set nowrap
@@ -25,25 +26,38 @@ set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\
-set background=dark
+set list
+set lcs+=space:·
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+set number
+set hlsearch
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
-Plug 'jremmen/vim-ripgrep'
-Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 colorscheme gruvbox
+set background=dark
 
-if executable('rg')
-    let g:rg_derive_root='true'
-endif
-
-let g:ctrlp_user_command = ['.git','cd %s && git ls-files -co --exclude-standard']
 let mapleader = " "
 let g:netrw_banner = 0
-let g:ctrlp_use_caching = 0
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:netrw_liststyle = 3
+
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fg :Rg<CR>
+nnoremap <leader>fb :Buffer<CR>
+
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
