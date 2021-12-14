@@ -3,11 +3,14 @@
 Create an Amazon Linux EC2 image. It comes with AWS CLI installed.
 
 Setup AWS CLI with
+
 `aws configure`
 
 Edit crontab
+
 `crontab -e`
 
 Insert cron job
+
 `0 23 * * * aws ecs update-service --cluster cluster-id --service service-name --desired-count 1 >/dev/null 2>&1`
 
