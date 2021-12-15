@@ -4,8 +4,9 @@ env:
   variables:
     REPOSITORY_TAG: $REPOSITORY_TAG
     REPOSITORY_URI: $REPOSITORY_URI
-    DOCKER_USER: $DOCKER_USER
-    DOCKER_PASS: $DOCKER_PASS
+  parameter-store:
+    DOCKER_USER: dockeruser
+    DOCKER_PASS: dockerpass
 
 phases:
   pre_build:
