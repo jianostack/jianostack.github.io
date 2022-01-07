@@ -60,3 +60,6 @@ ctrl+t
 
 ## Go to last accessed tab
 g<Tab>		Go to previous (last accessed) tab page.
+
+## format json
+:%!python -m json.tool
