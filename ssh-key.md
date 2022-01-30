@@ -1,21 +1,11 @@
-# Generate ssh key
+## Generate ssh key
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
-https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-
-Generate ssh key
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-
-Start the ssh-agent in the background
-`eval "$(ssh-agent -s)"`
-
-MacOS
-`~/.ssh/config`
-
+## port 22:2: Too many authentication failures
+You have too many key stored in your local ssh-agent.
 ```
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
+ssh-add -l
+ssh-add -D
 ```
 
-`ssh-add -K ~/.ssh/id_rsa`
+https://stackoverflow.com/questions/31051504/unable-to-connect-from-ec2-server/31058436#31058436
