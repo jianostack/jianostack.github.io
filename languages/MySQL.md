@@ -17,11 +17,8 @@ drop user name;
 ### create user
 create user 'dumper'@'%' identified by 'password';
 
-### grant privileges
-GRANT ALL PRIVILEGES ON dbname.* To 'user'@'host';
-
-### All privileges with grant on wildcard
-GRANT ALL PRIVILEGES ON *.* To 'user'@'host' WITH GRANT OPTION;
+### Grant privileges to user
+GRANT ALL PRIVILEGES ON database_name.* To 'user'@'host' WITH GRANT OPTION;
 
 ### mysqldump single database remotely
 mysqldump -h -u -p database_name > dump.sql 
