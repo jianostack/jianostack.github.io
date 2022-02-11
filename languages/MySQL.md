@@ -44,9 +44,6 @@ use databasename;
 ### show tables
 show tables;
 
-### login
-mysql -hIPaddress -uroot -p
-
 ### replication users
 GRANT REPLICATION SLAVE ON *.* TO replication_user;
 
