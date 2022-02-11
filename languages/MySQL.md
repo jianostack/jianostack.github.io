@@ -14,6 +14,9 @@ source db.sql;
 ### drop user
 drop user name;
 
+### list users
+select user,host from mysql.user;
+
 ### create user
 create user 'dumper'@'%' identified by 'password';
 
@@ -43,9 +46,6 @@ show tables;
 
 ### login
 mysql -hIPaddress -uroot -p
-
-### list users
-select user,host from mysql.user;
 
 ### replication users
 GRANT REPLICATION SLAVE ON *.* TO replication_user;
