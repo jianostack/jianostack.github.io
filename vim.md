@@ -63,3 +63,10 @@ g<Tab>		Go to previous (last accessed) tab page.
 
 ## format json
 :%!python -m json.tool
+
+### next tab
+gt
+
+### prev tab
+gT
+
