@@ -50,6 +50,7 @@ shift-v to visually highlight
 
 ## terminal
 `:term`
+`:tab ter`
 
 ## wrap
 :set wrap
