@@ -167,3 +167,9 @@ pidof name-of-process
 
 ## DNS information groper
 dig 
+
+## Run commands in the background
+```
+your_command > /dev/null 2>&1 &
+jobs -l
+```
