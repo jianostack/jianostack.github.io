@@ -1,6 +1,6 @@
-# AWS Elastic container service
+# AWS ECS Fargate walk-through
 
-ECS, RDS, Elastic cache and CodePipeline setup. I use it for PHP or  NodeJS stacks.
+ECS, RDS, Elastic cache and CodePipeline setup. I use it for PHP or NodeJS stacks.
 
 ## Creating the VPC and Cluster
 
@@ -11,7 +11,6 @@ Next is public vs private subnets. Public is easier to config but not as secure.
 I recommend Fargate with public subnets. Use CloudFormation to spin up the VPC, load balancer, subnets and ECS cluster.
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/FargateLaunchType/clusters/public-vpc.yml
-
 
 
 ## ECR
@@ -70,39 +69,28 @@ aws elbv2 create-target-group \
 ```
 
 ### ecs-cli compose service
+_Note: The Amazon ECS CLI can only manage tasks, services, and container instances that were created with the Amazon ECS CLI._
+Task definition updates done in the AWS web console will be lost when using the ecs-cli to update thereafter.
+
 To use this cli you will need these three files:
 
 - [ecs-service.yml](ecs-service.yml)
 - [ecs-params.yml](ecs-params.yml)
-- .env_example
-
-### ecs-cli compose service create
-This will create our task definition.
-
-```
-ecs-cli compose --project-name project-name-is-ecs-service-name \
---ecs-params ecs-params.yml \
---file ecs-service.yml \
-service create \
---create-log-groups \
---tags project=string \
---cluster string \
---launch-type FARGATE \
---target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" \
---health-check-grace-period 30 \
---aws-profile profile-name
-```
 
 ### ecs-cli compose service up
-Create and start the service. Also used to update.
+This will create our task definition, create an ECS service and set task count to 1.
 
 ```
 ecs-cli compose --project-name project-name-is-ecs-service-name \
 --ecs-params ecs-params.yml \
 --file ecs-service.yml \
 service up \
+--create-log-groups \
+--tags project=string \
 --cluster string \
---tags project=name \
+--launch-type FARGATE \
+--target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" \
+--health-check-grace-period 30 \
 --aws-profile profile-name
 ```
 
