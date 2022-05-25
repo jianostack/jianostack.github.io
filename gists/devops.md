@@ -70,4 +70,5 @@ Who created Linux?
 
 Diff between Unix and Linux?
 
-What does git stand for?
+### What does git stand for?
+Wikipedia says Linus named it after himself. Unplesant person.
