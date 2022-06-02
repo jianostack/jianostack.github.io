@@ -56,9 +56,6 @@ What's the system call for creating files?
 
 Order by execution time: reading disk, accessing memory, context switch, writing a cpu register.
 
-Do you know how to use Vim?
-Yes
-
 What does Vim stand for?
 VI improved. VI stand for visual.
 
@@ -70,5 +67,17 @@ Who created Linux?
 
 Diff between Unix and Linux?
 
-### What does git stand for?
-Wikipedia says Linus named it after himself. Unplesant person.
+EKS
+https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html
+
+Jenkins
+https://www.jenkins.io/doc/book/getting-started/
+Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+
+Fluxcd
+Continous deployment for Kubernetes.
+https://fluxcd.io/
+
+Gitlab
+https://docs.gitlab.com/
+ci/cd, collab, agile and security.
