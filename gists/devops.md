@@ -117,6 +117,6 @@ Digital product
 Unstoppable domains
 Revisit news
 Terraform on AWS
-Kubernetes EKS
+Kubernetes EKS https://github.com/kelseyhightower/kubernetes-the-hard-way
 Dockerfile security root user bad
 Dockerfile standards for developers
