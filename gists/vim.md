@@ -56,9 +56,6 @@ shift-v to visually highlight
 :set wrap
 :set nowrap
 
-## fzf search ignored files
-ctrl+t
-
 ## Go to last accessed tab
 g<Tab>		Go to previous (last accessed) tab page.
 

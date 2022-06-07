@@ -4,11 +4,7 @@ ECS, RDS, Elastic cache and CodePipeline setup. I use it for PHP or NodeJS stack
 
 ## Creating the VPC and Cluster
 
-First off choose your launch type. EC2 launch type allows greater control but you need to manage your EC2 instances. Fargate launch type manages your servers for you.
-
-Next is public vs private subnets. Public is easier to config but not as secure. Private is more secure but with a harder setup and heavier price tag.
-
-I recommend Fargate with public subnets. Use CloudFormation to spin up the VPC, load balancer, subnets and ECS cluster.
+Use CloudFormation to spin up the VPC, load balancer, subnets and ECS cluster.
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/FargateLaunchType/clusters/public-vpc.yml
 
@@ -47,9 +43,11 @@ If you create a new service role make sure you attach this policy:
 
 AmazonEC2ContainerRegistryPowerUser
 
-
 ## ECS services, tasks and target groups
-Setup your ecs-cli first.
+
+Deploy a service on AWS Fargate, hosted in a public subnet, and accessible via a public load balancer.
+
+https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/FargateLaunchType/services/public-service.yml
 
 ### Target groups
 Create the target group and assign it to the load balancer.

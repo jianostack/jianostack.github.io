@@ -67,17 +67,56 @@ Who created Linux?
 
 Diff between Unix and Linux?
 
-EKS
-https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html
+## Why DevOps?
+I enjoy creating automated tasks and making effecient use of time.
 
-Jenkins
-https://www.jenkins.io/doc/book/getting-started/
-Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
+## Dockerfile RUN
+The RUN instruction will execute any commands in a new layer on top of the current image and commit the results. The resulting committed image will be used for the next step in the Dockerfile.
 
-Fluxcd
-Continous deployment for Kubernetes.
-https://fluxcd.io/
+## Dockerfile CMD
+There can only be one CMD instruction in a Dockerfile.
+The main purpose of a CMD is to provide defaults for an executing container (ENTRYPOINT).
 
-Gitlab
-https://docs.gitlab.com/
-ci/cd, collab, agile and security.
+## Dockerfile ENTRYPOINT
+An ENTRYPOINT allows you to configure a container that will run as an executable. It will insert custom arguements into CMD.
+
+## NAT gateway
+Network Address Translation (NAT) service. It can be used to connect instances in a private subnet to services outside your VPC.
+Public NAT gateways allow instances to connect to the internet.
+Private NAT gateway allow instances to connect to other VPCs or on-premises networks.
+
+## How do you challenge others with different opinions?
+Listen carefully. Put myself in their shoes. Ask questions. Clarify assumptions. Defend my case with examples. Be patient.
+
+## What is a difficult problem you have solved in DevOps?
+Outgoing static IP on AWS ECS Fargate launch type.
+
+## How do you keep up with new tech?
+Security blogs (Google online security, Schneier)
+DevOps (Scripting OSX, Delicious brains, Laravel news)
+Leaders (Matt Mullenweg, Open Gov, Raspberry Pi news, James Clear)
+Finance (Singsaver, dr wealth, woke salaryman)
+Other (noobcookbook, soup diaries)
+
+## Are curious & always learning. What are you up to right now?
+Telegram bots.
+
+## What is your biggest failure?
+AWS DevOps professional exam.
+
+## Thrive on challenge. When was the last time you failed?
+Yummy bros AWS budget under estimation.
+
+## Can deal with constant change. When were you last surprised?
+
+## Have mastered at least one skill of your trade but you’re not defined by it. What can you teach us?
+
+## Prepare a few short stories and highlights of your career and practice telling those stories.
+
+Digital product
+Unstoppable domains
+Revisit news
+Terraform on AWS
+Kubernetes EKS
+Dockerfile security root user bad
+Dockerfile standards for developers

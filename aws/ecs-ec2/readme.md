@@ -4,6 +4,10 @@
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/EC2LaunchType/clusters/public-vpc.yml
 
+## ## ECS services, tasks and target groups
+
+https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/EC2LaunchType/services/public-service.yml
+
 ### ecs-cli compose service up
 This will create our task definition, create an ECS service and set task count to 1.
 
