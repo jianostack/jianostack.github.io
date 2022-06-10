@@ -120,3 +120,7 @@ Terraform on AWS
 Kubernetes EKS https://github.com/kelseyhightower/kubernetes-the-hard-way
 Dockerfile security root user bad
 Dockerfile standards for developers
+
+## DevOps roadmap
+
+https://roadmap.sh/devops
