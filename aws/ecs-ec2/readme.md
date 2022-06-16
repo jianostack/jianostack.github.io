@@ -4,7 +4,7 @@
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/EC2LaunchType/clusters/public-vpc.yml
 
-## ## ECS services, tasks and target groups
+## ECS services, tasks and target groups
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/EC2LaunchType/services/public-service.yml
 
