@@ -6,6 +6,10 @@ Thankfully AWS has CloudFormation templates that we can use to get up and runnin
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/FargateLaunchType/clusters/public-vpc.yml
 
+Nathan Peck has a public private fargate network stack to try out too.
+
+https://github.com/nathanpeck/aws-cloudformation-fargate/blob/master/fargate-networking-stacks/public-private-vpc.yml
+
 ## Public subnets
 These public two subnets are connected to the load balancer and share the same route table.
 
