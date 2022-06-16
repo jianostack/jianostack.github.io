@@ -99,3 +99,7 @@ SELECT pt_user_id, sum(pt_point_add)-sum(pt_point_use)
 FROM member_point_system
 group by pt_user_id with rollup;
 
+
+## Update 
+
+UPDATE `db_name`.`table_name` SET column_name = 'block';
