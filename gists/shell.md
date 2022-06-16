@@ -65,9 +65,6 @@ watch -n 2 df -h
 # iterm tmux
 tmux -CC
 
-# HDD disk space
-df -h
-
 # List files and their sizeasdfa
 du -sh *
 
@@ -173,3 +170,12 @@ dig
 your_command > /dev/null 2>&1 &
 jobs -l
 ```
+
+# HDD disk space
+df -h
+
+## Linux header 
+
+How to clear apt cache in /usr/src
+
+sudo apt-get autoremove
