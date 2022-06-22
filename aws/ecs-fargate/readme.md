@@ -21,6 +21,8 @@ aws ecr create-repository \
     --profile profile-name
 ```
 
+Create an ECR lifecycle.
+
 ## CodeBuild
 
 Create a build project and complete the initial build so it can push to ECR.
