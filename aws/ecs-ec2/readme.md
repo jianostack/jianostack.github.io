@@ -1,10 +1,12 @@
-# AWS ECS EC2 walk-through
+# AWS ECS EC2
 
 ## Creating the VPC and Cluster
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/EC2LaunchType/clusters/public-vpc.yml
 
-## ECS services, tasks and target groups
+## ECS services
+
+You can try and create a service with this script. 
 
 https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/ECS/EC2LaunchType/services/public-service.yml
 
@@ -24,3 +26,9 @@ service up \
 --health-check-grace-period 30 \
 --aws-profile profile-name
 ```
+
+## Gotchas
+
+### Key pair issue EC2 launch type
+The Cloudformation doesn't associate a keypair with your EC2 instance. 
+
