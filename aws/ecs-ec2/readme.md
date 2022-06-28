@@ -21,7 +21,7 @@ service up \
 --create-log-groups \
 --tags project=string \
 --cluster string \
---launch-type FARGATE \
+--launch-type EC2 \
 --target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" \
 --health-check-grace-period 30 \
 --aws-profile profile-name
