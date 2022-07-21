@@ -12,4 +12,8 @@ Edit crontab
 
 Insert cron job. Take note of your server time zone. Usually it is UTC.
 
-`0 23 * * * aws ecs update-service --cluster cluster-id --service service-name --desired-count 1 >/dev/null 2>&1`
+```
+0 22 * * * aws ecs update-service --cluster cluster-id --service service-name --desired-count 1 >/dev/null 2>&1
+
+59 15 * * * aws ecs update-service --cluster cluster-id --service service-name --desired-count 0 >/dev/null 2>&1
+```
