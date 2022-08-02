@@ -54,3 +54,13 @@ docker cp mycontainer_id:/foo.txt foo.txt
 
 ## remove all images
 `docker rmi $(docker images -a)`
+
+## Dockerfile RUN
+The RUN instruction will execute any commands in a new layer on top of the current image and commit the results. The resulting committed image will be used for the next step in the Dockerfile.
+
+## Dockerfile CMD
+There can only be one CMD instruction in a Dockerfile.
+The main purpose of a CMD is to provide defaults for an executing container (ENTRYPOINT).
+
+## Dockerfile ENTRYPOINT
+An ENTRYPOINT allows you to configure a container that will run as an executable. It will insert custom arguements into CMD.
