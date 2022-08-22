@@ -182,6 +182,4 @@ sudo apt-get autoremove
 
 ## cron job logs
 
-Check `cat /var/log/cron.log` or `cat /var/log/messages` for errors
-
 Ubuntu: `grep CRON /var/log/syslog`
