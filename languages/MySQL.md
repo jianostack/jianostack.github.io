@@ -154,3 +154,30 @@ UPDATE `database_name`.`table_name` SET email = 'hello@example.com'
 WHERE NOT email LIKE "%example-one.com" AND NOT
 email LIKE "%example-two.com";
 ```
+
+## Group By
+```
+select created_by,COUNT(*) 
+FROM tablea
+where tablea.created_by is not null and tablea.deleted_at is null
+group by created_by;
+```
+
+## Where And
+```
+select CONCAT(tableb.name_given, ' ', tableb.name_family),COUNT(*)
+from tablea
+left join tableb
+on tablea.created_by = tableb.user_uuid
+where tablea.created_by is not null and tablea.deleted_at is null
+group by tablea.created_by, tableb.name_given, tableb.name_family;
+```
+
+## Is not null
+```
+select COUNT(*) FROM tablea
+where tablea.created_by is not null and tablea.deleted_at is not null;
+```
+
+## Rename table
+Rename table old_table_new to new_table_name;

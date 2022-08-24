@@ -179,3 +179,7 @@ df -h
 How to clear apt cache in /usr/src
 
 sudo apt-get autoremove
+
+## cron job logs
+
+Ubuntu: `grep CRON /var/log/syslog`

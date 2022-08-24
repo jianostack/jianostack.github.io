@@ -1,7 +1,7 @@
 # AWS CLI cheat sheet
 
 ## Session manager start session 
-`aws ssm start-session --target "i-0d1cc70cad5734b1e"`
+`aws ssm start-session --target "i-xxx"`
 
 ## aws ec2 describe-instances
 ```
