@@ -68,3 +68,5 @@ gt
 ### prev tab
 gT
 
+### Run command inside vim
+`!git status`
