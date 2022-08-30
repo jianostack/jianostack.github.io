@@ -1,5 +1,0 @@
-## terminal mode
-:terminal
-
-## terminal normal mode
-<C-\><C-n>
