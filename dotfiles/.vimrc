@@ -1,4 +1,3 @@
-
 syntax on
 
 set nowrap
@@ -13,24 +12,11 @@ set nobackup
 set incsearch
 set backspace=indent,eol,start 
 set laststatus=2
-set statusline=
-set statusline+=%#PmenuSel#
-set statusline+=%#LineNr#
-set statusline+=\ %f
-set statusline+=%m\
-set statusline+=%=
-set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-set statusline+=\
-set list
-set lcs+=space:·
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-set number
 set hlsearch
+let mapleader = " "
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -42,10 +28,6 @@ call plug#end()
 
 colorscheme gruvbox
 set background=dark
-
-let mapleader = " "
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
 
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fg :Rg<CR>
