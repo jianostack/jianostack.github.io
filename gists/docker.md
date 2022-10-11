@@ -1,5 +1,4 @@
 ## prune images
-
 `docker image prune -a`
 
 ## build
@@ -64,3 +63,6 @@ The main purpose of a CMD is to provide defaults for an executing container (ENT
 
 ## Dockerfile ENTRYPOINT
 An ENTRYPOINT allows you to configure a container that will run as an executable. It will insert custom arguements into CMD.
+
+## AWS CLI and ECR
+`aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com`

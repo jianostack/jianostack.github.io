@@ -175,7 +175,6 @@ jobs -l
 df -h
 
 ## Linux header 
-
 How to clear apt cache in /usr/src
 
 sudo apt-get autoremove
@@ -183,3 +182,6 @@ sudo apt-get autoremove
 ## cron job logs
 
 Ubuntu: `grep CRON /var/log/syslog`
+
+## what is using my port - mac
+`lsof -i tcp:22000 `
