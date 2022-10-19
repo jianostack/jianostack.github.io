@@ -1,6 +1,6 @@
 # Deploying an OpenVPN server on AWS
 
-This tutorial is a modified version of [Wolfgang's](https://notthebe.ee/Creating-your-own-OpenVPN-server.html).
+This tutorial is a modified version of [Wolfgang's](https://notthebe.ee/blog/creating-your-own-vpn).
 
 Launch an EC2 instance and assign an elastic IP to it.
 
