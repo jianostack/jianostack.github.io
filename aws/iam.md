@@ -1,4 +1,4 @@
-## user group permission policy
+## User group permission policy
 ```
 {
     "Version": "2012-10-17",
@@ -6,13 +6,13 @@
         {
             "Effect": "Allow",
             "Action": "sts:AssumeRole",
-            "Resource": "arn:aws:iam::[account-number]:role/oeca-developers"
+            "Resource": "arn:aws:iam::[account-number]:role/developers"
         }
     ]
 }
 ```
 
-## project role trust relationship
+## Project role trust relationship
 ```
 {
   "Version": "2012-10-17",
@@ -21,7 +21,6 @@
       "Effect": "Allow",
       "Principal": {
         "AWS": [
-          "arn:aws:iam::[account-number]:user/[name]",
           "arn:aws:iam::[account-number]:user/[name]"
         ]
       },
@@ -36,7 +35,7 @@
 }
 ```
 
-## project developers codepipeline s3 policy
+## Developers codepipeline codebuild read 
 ```
 {
     "Version": "2012-10-17",
@@ -45,60 +44,37 @@
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "codebuild:BatchGetProjects",
+                "codebuild:BatchGetBuildBatches",
+                "codebuild:ListReportsForReportGroup",
                 "codepipeline:ListWebhooks",
-                "codepipeline:ListTagsForResource"
-            ],
-            "Resource": [
-                "arn:aws:codepipeline:*:[account-number]:actiontype:*/*/*/*",
-                "arn:aws:codepipeline:*:[account-number]:webhook:*"
-            ]
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": [
                 "codepipeline:ListPipelineExecutions",
                 "codepipeline:ListActionExecutions",
-                "codepipeline:GetPipeline",
                 "codepipeline:ListTagsForResource",
-                "codepipeline:GetPipelineState",
-                "codepipeline:GetPipelineExecution"
-            ],
-            "Resource": "arn:aws:codepipeline:*:[account-number]:*"
-        },
-        {
-            "Sid": "VisualEditor2",
-            "Effect": "Allow",
-            "Action": [
-                "s3:ListAllMyBuckets",
+                "codepipeline:GetThirdPartyJobDetails",
+                "codebuild:ListBuildsForProject",
+                "codebuild:ListRepositories",
+                "codepipeline:GetJobDetails",
+                "codebuild:BatchGetBuilds",
+                "codebuild:ListBuildBatches",
                 "codepipeline:ListPipelines",
                 "codepipeline:GetPipeline",
-                "cognito-idp:*",
+                "codebuild:ListBuilds",
+                "codebuild:ListBuildBatchesForProject",
                 "codebuild:ListProjects",
-                "codepipeline:GetThirdPartyJobDetails",
-                "codepipeline:GetJobDetails",
-                "codecommit:ListRepositories",
-                "codepipeline:ListActionTypes",
-                "codebuild:BatchGetProjects",
-                "codedeploy:ListApplications",
-                "codebuild:ListBuildsForProject",
-                "codebuild:BatchGetBuilds"
+                "codepipeline:GetPipelineState",
+                "codepipeline:GetActionType",
+                "codepipeline:GetPipelineExecution",
+                "codebuild:ListConnectedOAuthAccounts",
+                "codepipeline:ListActionTypes"
             ],
             "Resource": "*"
-        },
-        {
-            "Sid": "VisualEditor3",
-            "Effect": "Allow",
-            "Action": "s3:*",
-            "Resource": [
-                "arn:aws:s3:::[name]"
-            ]
         }
     ]
 }
 ```
 
-## project developers cloudwatch policy
+## Developers cloudwatch
 ```
 {
     "Version": "2012-10-17",
