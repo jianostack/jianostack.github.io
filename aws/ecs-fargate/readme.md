@@ -29,9 +29,9 @@ __Tip:__ Log into the AWS console and an ECR lifecycle to delete untagged images
 
 Create a build project and complete the initial successful build so you have an image in ECR.
 
-### buildspec.yml
+### buildspec.yaml
 
-Add buildspec.yml to your repo.
+Add buildspec.yaml to your repo.
 
 Go to AWS console Codebuild > Environments and add variables.
 
