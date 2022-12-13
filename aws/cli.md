@@ -3,9 +3,17 @@
 ## Session manager start session 
 `aws ssm start-session --target "i-xxx"`
 
-## aws ec2 describe-instances
+## Session manager with SSH SCP SFTP
+
+Insert into ~/.ssh/config
+
 ```
-aws ec2 describe-instances \
---query 'Reservations[*].Instances[*].{Instance:InstanceId,Name:Tags[?Key==`Name`]|[0].Value}' \
---output text
+# SSH over Session Manager
+host i-* mi-*
+    ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
 ```
+
+Connect to SSH SCP SFTP normally
+`sftp user@ec2-instanceid`
+
+
