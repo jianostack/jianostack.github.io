@@ -1,3 +1,7 @@
+<!-- Space: DOS -->
+<!-- Parent: Create -->
+<!-- Title: AWS ECS EC2 -->
+
 # AWS ECS EC2
 
 ## Creating the VPC and Cluster
