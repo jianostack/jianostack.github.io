@@ -23,7 +23,7 @@ Shift + D
 `:%s/search/replace/g`
 
 ## tabnew
-`:tabnew` 
+`:tabnew`
 
 ## end of file
 `shift+G`
@@ -49,24 +49,37 @@ shift-v to visually highlight
 = to format code
 
 ## terminal
-`:term`
-`:tab ter`
+```
+:term
+:tab ter
+```
 
 ## wrap
+```
 :set wrap
 :set nowrap
+```
 
 ## Go to last accessed tab
+```
 g<Tab>		Go to previous (last accessed) tab page.
+```
 
 ## format json
+```
 :%!python -m json.tool
+```
+## next tab
+`gt`
 
-### next tab
-gt
+## prev tab
+`gT`
 
-### prev tab
-gT
-
-### Run command inside vim
+## Run command inside vim
 `!git status`
+
+## Spellcheck
+```
+set spell
+set nospell
+```
