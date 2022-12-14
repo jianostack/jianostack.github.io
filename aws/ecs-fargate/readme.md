@@ -1,3 +1,11 @@
+<!-- Space: DOS -->
+<!-- Parent: Create -->
+<!-- Title: AWS ECS Fargate -->
+
+# AWS Copilot
+
+ECS Fargate setup which uses AWS ecs-cli has now been superseeded by AWS Copilot.
+
 # AWS ECS Fargate
 
 > A stack for deploying containerized applications in AWS Fargate. This stack runs containers in a public VPC subnet, and includes a public facing load balancer to register the services in.
