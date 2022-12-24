@@ -19,8 +19,8 @@ This will create our task definition, create an ECS service and set task count t
 
 ```
 ecs-cli compose --project-name project-name-is-ecs-service-name \
---ecs-params ecs-params.yml \
---file ecs-service.yml \
+--ecs-params params.yml \
+--file service.yml \
 service up \
 --create-log-groups \
 --tags project=string \
@@ -30,9 +30,4 @@ service up \
 --health-check-grace-period 30 \
 --aws-profile profile-name
 ```
-
-## Gotchas
-
-### Key pair issue EC2 launch type
-The Cloudformation doesn't associate a keypair with your EC2 instance. 
 
