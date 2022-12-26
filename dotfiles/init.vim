@@ -12,8 +12,7 @@ set nobackup
 set incsearch
 set list
 set hlsearch
-set foldcolumn=3
-highlight FoldColumn ctermbg=0
+
 let mapleader = " "
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
