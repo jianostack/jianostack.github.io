@@ -10,7 +10,6 @@ set ignorecase
 set noswapfile
 set nobackup
 set incsearch
-set list
 set hlsearch
 
 let mapleader = " "
