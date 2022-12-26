@@ -6,12 +6,13 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set smartcase
+set ignorecase
 set noswapfile
 set nobackup
 set incsearch
-set backspace=indent,eol,start
-set laststatus=2
+set list
 set hlsearch
+
 let mapleader = " "
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
