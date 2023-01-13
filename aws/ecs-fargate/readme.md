@@ -75,7 +75,6 @@ aws elbv2 create-target-group \
     --port 80 \
     --target-type ip \
     --vpc-id vpc-0adfdf
-    --profile profile-name
 ```
 
 ### ecs-cli compose service
