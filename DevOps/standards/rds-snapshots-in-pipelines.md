@@ -28,7 +28,8 @@ Add a new inline policy to the Codebuild IAM role
             "Effect": "Allow",
             "Action": [
                 "rds:AddTagsToResource",
-                "rds:CreateDBClusterSnapshot"
+                "rds:CreateDBClusterSnapshot",
+                "rds:CreateDBSnapshot"
             ],
             "Resource": "*"
         }
