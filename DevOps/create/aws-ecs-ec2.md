@@ -1,6 +1,5 @@
 <!-- Space: DOS -->
 <!-- Parent: Create -->
-<!-- Title: AWS ECS EC2 -->
 
 # AWS ECS EC2
 
@@ -31,3 +30,42 @@ service up \
 --aws-profile profile-name
 ```
 
+params.yml
+```
+version: 1
+task_definition:
+  task_execution_role: ecsTaskExecutionRole
+  ecs_network_mode: bridge
+  task_size:
+    mem_limit: 0.5GB
+    cpu_limit: 256
+run_params:
+  network_configuration:
+    awsvpc_configuration:
+      subnets:
+        - subnet-id
+        - subnet-id
+      security_groups:
+        - sg-id
+      assign_public_ip: ENABLED
+
+```
+
+service.yml
+```
+version: "3"
+
+services:
+
+  container-name:
+    image: # repositoryurl:tag
+    ports:
+      - "0:3000"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: # group name
+        awslogs-region: ap-southeast-1
+        awslogs-stream-prefix: ecs
+
+```

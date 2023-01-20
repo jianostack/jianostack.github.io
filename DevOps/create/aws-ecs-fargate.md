@@ -1,16 +1,11 @@
 <!-- Space: DOS -->
 <!-- Parent: Create -->
-<!-- Title: AWS ECS Fargate -->
-
-# AWS Copilot
-
-ECS Fargate setup which uses AWS ecs-cli has now been superseeded by AWS Copilot.
 
 # AWS ECS Fargate
 
-> A stack for deploying containerized applications in AWS Fargate. This stack runs containers in a public VPC subnet, and includes a public facing load balancer to register the services in.
+**AWS Copilot**
 
-With some DevOps sprinkled in.
+ECS Fargate setup which uses AWS ecs-cli has now been superseeded by AWS Copilot.
 
 ## Creating the VPC and Cluster
 
@@ -83,8 +78,62 @@ Task definition updates done in the AWS web console will be lost when using the 
 
 To use this cli you will need these three files:
 
-- [ecs-service.yml](ecs-service.yml)
-- [ecs-params.yml](ecs-params.yml)
+service.yml
+```
+version: "3"
+
+services:
+
+  container-name:
+    image: # repositoryurl:tag
+    ports:
+      - "3000:3000"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: # group name
+        awslogs-region: ap-southeast-1
+        awslogs-stream-prefix: ecs
+```
+
+params.yml
+```
+version: 1
+task_definition:
+  task_execution_role: ecsTaskExecutionRole
+  ecs_network_mode: awsvpc
+  task_size:
+    mem_limit: 0.5GB
+    cpu_limit: 256
+run_params:
+  network_configuration:
+    awsvpc_configuration:
+      subnets:
+        - subnet-id
+        - subnet-id
+      security_groups:
+        - sg-id
+      assign_public_ip: ENABLED
+```
+
+scheduler.yml
+```
+version: "3"
+
+services:
+
+  container-name:
+    image: # repositoryurl:tag
+    env_file: .env_example
+    environment:
+      CONTAINER_ROLE: scheduler
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: # group name
+        awslogs-region: ap-southeast-1
+        awslogs-stream-prefix: ecs
+```
 
 ### ecs-cli compose service up
 This will create our task definition, create an ECS service and set task count to 1.
@@ -126,6 +175,18 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --profile profile-name
 ```
 
+ecs-cpu-policy.json
+```
+{
+     "TargetValue": 25.0,
+     "PredefinedMetricSpecification": {
+         "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
+     },
+     "ScaleOutCooldown": 60,
+    "ScaleInCooldown": 60
+}
+```
+
 ### autoscaling put-scaling-policy memory
 
 ```
@@ -135,6 +196,19 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --policy-name memory-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
 --target-tracking-scaling-policy-configuration file://ecs-memory-policy.json \
 --profile profile-name
+```
+
+ecs-memory-policy.json
+```
+{
+  "TargetValue": 45.0,
+  "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ECSServiceAverageMemoryUtilization"
+  },
+  "ScaleOutCooldown": 60,
+ "ScaleInCooldown": 60
+}
+
 ```
 
 ## CodePipeline
