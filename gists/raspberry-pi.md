@@ -33,7 +33,7 @@ current storage devices
 `sudo blkid`
 
 Check the Partitions
-`sudo fdisk –l`
+`sudo fdisk -l`
 
 Mounting it
 `sudo mount /dev/sda1 /mnt`
