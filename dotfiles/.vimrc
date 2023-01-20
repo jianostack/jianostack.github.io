@@ -11,7 +11,8 @@ set nobackup
 set incsearch
 set hlsearch
 set laststatus=2 "lightline
-set noshowmode "lightline 
+set noshowmode "lightline
+set backspace=indent,eol,start 
 
 let mapleader = " "
 let g:netrw_banner = 0

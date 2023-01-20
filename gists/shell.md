@@ -180,8 +180,10 @@ How to clear apt cache in /usr/src
 sudo apt-get autoremove
 
 ## cron job logs
-
 Ubuntu: `grep CRON /var/log/syslog`
 
 ## what is using my port - mac
 `lsof -i tcp:22000 `
+
+## What a token references, you can use the type
+`type php`
