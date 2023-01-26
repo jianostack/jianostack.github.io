@@ -69,14 +69,21 @@ g<Tab>		Go to previous (last accessed) tab page.
 ```
 :%!python -m json.tool
 ```
+
 ## next tab
-`gt`
+```
+gt
+```
 
 ## prev tab
-`gT`
+```
+gT
+```
 
 ## Run command inside vim
-`!git status`
+```
+!git status
+```
 
 ## Spellcheck
 ```
@@ -84,8 +91,16 @@ set spell
 set nospell
 ```
 
-## remove file from buffer
-buffer id and bw
+## close single buffer
+- https://stackoverflow.com/questions/1269648/how-do-i-close-a-single-buffer-out-of-many-in-vim
+buffer id and buffer wipe
 ```
 1bw
+```
+
+## neovim terminal
+- To map <Esc> to exit terminal-mode
+- https://neovim.io/doc/user/nvim_terminal_emulator.html
+```
+:terminal
 ```
