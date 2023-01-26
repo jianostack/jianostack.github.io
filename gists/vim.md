@@ -83,3 +83,9 @@ g<Tab>		Go to previous (last accessed) tab page.
 set spell
 set nospell
 ```
+
+## remove file from buffer
+buffer id and bw
+```
+1bw
+```
