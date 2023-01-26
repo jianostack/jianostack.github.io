@@ -23,6 +23,7 @@ Plug 'nvim-lua/plenary.nvim'  " telescope dependency
 Plug 'nvim-telescope/telescope.nvim'  " telescope
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " finder preview
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
