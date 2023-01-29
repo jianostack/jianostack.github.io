@@ -1,5 +1,6 @@
 syntax on
 
+set clipboard=unnamed
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -12,17 +13,19 @@ set incsearch
 set hlsearch
 set laststatus=2 "lightline
 set noshowmode "lightline
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 
 let mapleader = " "
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+let g:auto_save = 1
 
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 nnoremap <leader>ff :Files<CR>

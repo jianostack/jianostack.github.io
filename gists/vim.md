@@ -65,9 +65,15 @@ shift-v to visually highlight
 g<Tab>		Go to previous (last accessed) tab page.
 ```
 
-## format json
+## format json in vim
 ```
 :%!python -m json.tool
+```
+
+## format json in neovim
+brew install jq
+```
+:%!jq .
 ```
 
 ## next tab
