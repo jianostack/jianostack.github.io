@@ -56,8 +56,8 @@ Register your workspace or download existing workspace
 Environment init and modify manifest.yml with existing VPC and subnets.
 `copilot env init`
 
-Restore existing service manifest file
-`copilot svc show -n mysvc --manifest test > copilot/mysvc/manifest.yml`
+copilot env deploy takes the configurations in your environment manifest and deploys your environment infrastructure.
+`copilot env deploy`
 
 Create a new service in the existing copilot app
 `copilot svc init`
@@ -65,14 +65,10 @@ Create a new service in the existing copilot app
 Deploy the new service.
 `copilot svc deploy`
 
-Creates a new application within the directory that will contain your service(s).
-`copilot app init --resource-tags department=MyDept`
 
-Copilot env init creates a new environment where your services will live.
-`copilot env init [flags]`
+Restore existing service manifest file
+`copilot svc show -n mysvc --manifest test > copilot/mysvc/manifest.yml`
 
-copilot env deploy takes the configurations in your environment manifest and deploys your environment infrastructure.
-`copilot env deploy`
 
 ## CodePipelines
 This won't create your pipeline, but it will create some local files under copilot/pipelines that will be used when creating your pipeline.

@@ -110,3 +110,13 @@ buffer id and buffer wipe
 ```
 :terminal
 ```
+
+## Refresh netrw
+```
+:E
+```
+
+## new file command
+```
+:e helloworld
+```

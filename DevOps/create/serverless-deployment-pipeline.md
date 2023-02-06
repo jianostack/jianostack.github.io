@@ -41,7 +41,6 @@ phases:
 Add the following policies to your CodeBuild IAM role:
 - AmazonS3FullAccess
 - CloudWatchLogsFullAccess
-- AWSIoTFullAccess
 - CloudWatchEventsFullAccess
 - AWSCloudFormationFullAccess
 - AWSLambda_FullAccess
