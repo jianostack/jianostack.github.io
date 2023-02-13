@@ -181,3 +181,8 @@ where tablea.created_by is not null and tablea.deleted_at is not null;
 
 ## Rename table
 Rename table old_table_new to new_table_name;
+
+## Find my.cnf
+```
+mysql --help | grep /my.cnf | xargs ls
+```

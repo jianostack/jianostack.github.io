@@ -74,5 +74,7 @@ git add $GZIP
 git checkout [commit ID] -- path/to/file
 
 ## files changed in a commit
-git show --name-only [commit]
+`git show --name-only [commit]`
 
+## commit line break
+`git commit -m "My head line" -m "My content line."`

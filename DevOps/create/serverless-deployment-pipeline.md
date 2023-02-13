@@ -5,7 +5,7 @@
 
 Insert the following buidspec.yml into your serverless repository. It uses SLS CLI to deploy. The environment variables are printed out to a temporary .env.$STAGE file.
 
-builspec.yml
+buildspec.yml
 ```
 version: 0.2
 
