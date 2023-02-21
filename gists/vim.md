@@ -120,3 +120,6 @@ buffer id and buffer wipe
 ```
 :e helloworld
 ```
+
+## close all windows
+`:qa`

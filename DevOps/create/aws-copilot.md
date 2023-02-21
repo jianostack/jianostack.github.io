@@ -80,5 +80,17 @@ Add the Codepipeline manifest files to the repo.
 Creates a CodePipeline in the same account and region as your application and kicks off a pipeline execution.
 `copilot pipeline deploy`
 
+## CodeBuild
+
+For NodeJS 14 use:
+- Ubuntu standard 5
+```
+phases:
+  install:
+    runtime-versions:
+      ruby: 2.7
+      nodejs: 14
+```
+
 Clean up
 `copilot app delete`

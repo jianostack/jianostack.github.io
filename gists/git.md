@@ -78,3 +78,7 @@ git checkout [commit ID] -- path/to/file
 
 ## commit line break
 `git commit -m "My head line" -m "My content line."`
+
+## reset one file
+`git checkout -- package-lock.json`
+
