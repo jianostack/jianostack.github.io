@@ -66,3 +66,9 @@ An ENTRYPOINT allows you to configure a container that will run as an executable
 
 ## AWS CLI and ECR
 `aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com`
+
+## Build args
+```
+export HTTP_PROXY=http://10.20.30.2:1234
+docker build --build-arg HTTP_PROXY .
+```
