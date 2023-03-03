@@ -13,7 +13,7 @@ host i-* mi-*
     ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
 ```
 
-Connect to SSH SCP SFTP normally
-`sftp user@ec2-instanceid`
+Connect via Session manager to SFTP
+`sftp -i Privacy-Enhanced-Mail.pem user@ec2-instanceid`
 
 
