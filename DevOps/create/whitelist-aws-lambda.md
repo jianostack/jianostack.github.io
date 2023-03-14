@@ -1,3 +1,8 @@
+<!-- Space: DOS -->
+<!-- Parent: Create -->
+
+# Whitelist AWS Lambda
+
 This guide will allow a Lambda function to have an outbound static IP address and indirectly connect to a IGW (internet gateway). 
 
 The Lambda function lives inside the private subnets and has a NAT gateway attached to the route tables. The NAT gateway has an Elastic IP which is the outbound static IP address.

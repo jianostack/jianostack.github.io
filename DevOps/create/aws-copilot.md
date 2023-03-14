@@ -82,14 +82,26 @@ Creates a CodePipeline in the same account and region as your application and ki
 
 ## CodeBuild
 
-For NodeJS 14 use:
-- Ubuntu standard 5
+For Nodejs 14:
+- Codebuild environment Ubuntu standard 5.0
+
 ```
 phases:
   install:
     runtime-versions:
       ruby: 2.7
       nodejs: 14
+```
+
+For Nodejs 16
+- Codebuild environment Ubuntu standard 6.0
+
+```
+phases:
+  install:
+    runtime-versions:
+      ruby: 3.1
+      nodejs: 16
 ```
 
 Clean up
