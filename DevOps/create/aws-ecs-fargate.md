@@ -36,10 +36,6 @@ Create a build project and complete the initial successful build so you have an 
 
 ```
 version: 0.2
-
-env:
-  variables:
-    NODE_ENV: $NODE_ENV
 phases:
   install:
     runtime-versions:
