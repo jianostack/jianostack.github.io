@@ -28,6 +28,12 @@ git push --all github
 ## git log
 `git log --oneline --graph --all`
 
+## git log patch last entry 
+`git log --patch -1`
+
+## git log stats
+`git log --stat`
+
 ## remove remote branch
 
 `git push <remote> --delete <branch>`

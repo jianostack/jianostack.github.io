@@ -34,9 +34,44 @@ Create a build project and complete the initial successful build so you have an 
 
 ### buildspec.yaml
 
-Add buildspec.yaml to your repo.
+```
+version: 0.2
 
-Go to AWS console Codebuild > Environments and add variables.
+env:
+  variables:
+    NODE_ENV: $NODE_ENV
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  pre_build:
+    commands:
+      - aws --version
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=$REPOSITORY_TAG}
+      - git config --global url.https://github.com/.insteadOf git://github.com/
+      - aws s3 cp s3://bucket/.env ./.env
+      - yarn install --frozen-lockfile --omit=dev
+  build:
+    commands:
+      - echo Build started on `date`
+      - yarn run build
+      - echo Building the Docker image...
+      - docker build -t $REPOSITORY_URI:$REPOSITORY_TAG .
+      - docker tag $REPOSITORY_URI:$REPOSITORY_TAG $REPOSITORY_URI:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - docker push $REPOSITORY_URI:$REPOSITORY_TAG
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - echo Writing image definitions file...
+      - printf '[{"name":"container-name","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
+```
 
 ### Privileged
 
