@@ -1,3 +1,7 @@
+# Docker
+
+As Hykes described it in his PyCon talk, containers are “self-contained units of software you can deliver from a server over there to a server over there, from your laptop to EC2 to a bare-metal giant server, and it will run in the same way because it is isolated at the process level and has its own file system.”
+
 ## prune images
 `docker image prune -a`
 

@@ -191,8 +191,7 @@ aws application-autoscaling register-scalable-target \
 --scalable-dimension ecs:service:DesiredCount \
 --resource-id service/cluster-name/service-name \
 --min-capacity 1 \
---max-capacity 8 \
---profile profile-name
+--max-capacity 8 
 ```
 
 ### autoscaling put-scaling-policy CPU
@@ -202,8 +201,7 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --scalable-dimension ecs:service:DesiredCount \
 --resource-id service/cluster-name/service-name \
 --policy-name cpu-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
---target-tracking-scaling-policy-configuration file://ecs-cpu-policy.json \
---profile profile-name
+--target-tracking-scaling-policy-configuration file://ecs-cpu-policy.json 
 ```
 
 ecs-cpu-policy.json
@@ -225,8 +223,7 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --scalable-dimension ecs:service:DesiredCount \
 --resource-id service/cluster-name/service-name \
 --policy-name memory-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
---target-tracking-scaling-policy-configuration file://ecs-memory-policy.json \
---profile profile-name
+--target-tracking-scaling-policy-configuration file://ecs-memory-policy.json
 ```
 
 ecs-memory-policy.json
