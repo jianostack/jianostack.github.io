@@ -187,3 +187,8 @@ Ubuntu: `grep CRON /var/log/syslog`
 
 ## What a token references, you can use the type
 `type php`
+
+## What operating system
+```
+uname -a
+```
