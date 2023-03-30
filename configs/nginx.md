@@ -1,3 +1,11 @@
+# Nginx
+
+config generator
+- https://www.digitalocean.com/community/tools/nginx
+
+Understanding Nginx HTTP Proxying, Load Balancing, Buffering, and Caching
+- https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching
+
 ## Per site
 
 ```

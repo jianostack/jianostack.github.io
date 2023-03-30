@@ -61,6 +61,7 @@ services:
     image: # repositoryurl:tag
     ports:
       - "0:3000"
+    env_file: .env
     logging:
       driver: awslogs
       options:
