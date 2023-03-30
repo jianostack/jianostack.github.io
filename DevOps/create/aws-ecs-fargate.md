@@ -180,8 +180,7 @@ service up \
 --cluster string \
 --launch-type FARGATE \
 --target-groups "targetGroupArn=arn,containerName=string,containerPort=3000" \
---health-check-grace-period 30 \
---aws-profile profile-name
+--health-check-grace-period 30 
 ```
 
 ### autoscaling register-scalable-target
