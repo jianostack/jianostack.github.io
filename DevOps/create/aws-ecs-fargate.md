@@ -185,6 +185,10 @@ service up \
 
 ### autoscaling register-scalable-target
 
+Download:
+- [ecs-cpu-policy.json](ecs-cpu-policy.json)
+- [ecs-memory-policy.json](ecs-memory-policy.json)
+
 ```
 aws application-autoscaling register-scalable-target \
 --service-namespace ecs \
@@ -204,18 +208,6 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --target-tracking-scaling-policy-configuration file://ecs-cpu-policy.json 
 ```
 
-ecs-cpu-policy.json
-```
-{
-     "TargetValue": 25.0,
-     "PredefinedMetricSpecification": {
-         "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
-     },
-     "ScaleOutCooldown": 60,
-    "ScaleInCooldown": 60
-}
-```
-
 ### autoscaling put-scaling-policy memory
 
 ```
@@ -224,19 +216,6 @@ aws application-autoscaling put-scaling-policy --service-namespace ecs \
 --resource-id service/cluster-name/service-name \
 --policy-name memory-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
 --target-tracking-scaling-policy-configuration file://ecs-memory-policy.json
-```
-
-ecs-memory-policy.json
-```
-{
-  "TargetValue": 45.0,
-  "PredefinedMetricSpecification": {
-      "PredefinedMetricType": "ECSServiceAverageMemoryUtilization"
-  },
-  "ScaleOutCooldown": 60,
- "ScaleInCooldown": 60
-}
-
 ```
 
 ## CodePipeline
