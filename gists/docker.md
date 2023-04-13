@@ -76,3 +76,8 @@ An ENTRYPOINT allows you to configure a container that will run as an executable
 export HTTP_PROXY=http://10.20.30.2:1234
 docker build --build-arg HTTP_PROXY .
 ```
+
+## AWS Public ECR 403
+```
+docker logout public.ecr.aws
+```
