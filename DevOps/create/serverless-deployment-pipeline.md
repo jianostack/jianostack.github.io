@@ -3,29 +3,24 @@
 
 # Serverless deployment pipeline
 
-Insert the following buidspec.yml into your serverless repository. It uses SLS CLI to deploy. The environment variables are printed out to a temporary .env.$STAGE file.
+Create a CodeBuild project with aws/codebuild/standard:6.0.
+
+Insert the following buidspec.yml into your serverless repository.
 
 buildspec.yml
 ```
 version: 0.2
-
-env:
-  variables:
-    STAGE: $STAGE
-    USER_TABLE: $USER_TABLE
-
 phases:
   install:
     runtime-versions:
-      python: 3.9
-      nodejs: 14
+      nodejs: 16
   pre_build:
     commands:
       - aws --version
-      - echo Preparing environment $STAGE
-      - echo "USER_TABLE=$USER_TABLE" >> .env.$STAGE
+      - echo Preparing environment
+      - aws s3 cp s3://project-$STAGE/api/.env.$STAGE ./.env.$STAGE
       - echo Installing dependencies
-      - npm install
+      - npm install --frozen-lockfile
   build:
     commands:
       - echo Deployment started on `date`
