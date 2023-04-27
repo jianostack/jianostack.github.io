@@ -66,8 +66,6 @@ Deploy the new service.
 `copilot svc deploy`
 
 
-Restore existing service manifest file
-`copilot svc show -n mysvc --manifest test > copilot/mysvc/manifest.yml`
 
 
 ## CodePipelines
@@ -89,19 +87,25 @@ For Nodejs 14:
 phases:
   install:
     runtime-versions:
-      ruby: 2.7
       nodejs: 14
 ```
 
 For Nodejs 16
+- Codebuild environment Amazon Linux standard 4.0
 - Codebuild environment Ubuntu standard 6.0
 
 ```
 phases:
   install:
     runtime-versions:
-      ruby: 3.1
       nodejs: 16
+```
+
+Define codebuild environment in manifest.yml
+```
+build:
+  image: aws/codebuild/amazonlinux2-x86_64-standard:4.0
+
 ```
 
 Clean up
