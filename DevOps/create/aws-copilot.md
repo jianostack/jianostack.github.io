@@ -110,3 +110,19 @@ build:
 
 Clean up
 `copilot app delete`
+
+
+## Parameter store environment variable file 
+
+For runtime environment variables
+
+`copilot secret init --cli-input-yaml input.yml --overwrite`
+
+Release pipeline
+
+input.yml:
+
+```
+BASIC_ACC_1_U:
+  staging-ecs: massive
+```
