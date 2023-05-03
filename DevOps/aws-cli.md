@@ -17,3 +17,6 @@ Connect via Session manager to SFTP
 `sftp -i Privacy-Enhanced-Mail.pem user@ec2-instanceid`
 
 
+Get sessions token 
+`aws sts get-session-token --duration-seconds 129600 --serial-number arn:aws:iam::accountno:mfa/user --token-code`
+
