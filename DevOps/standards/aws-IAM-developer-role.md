@@ -1,3 +1,8 @@
+<!-- Space: DOS -->
+<!-- Parent: Standards -->
+
+# IAM Developer role permissions
+
 ## User group permission policy
 ```
 {
@@ -91,7 +96,7 @@
             "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": "logs:DescribeLogGroups",
-            "Resource": "*"
+            "Resource": "arn:aws:logs:*:[account-number]:log-group:*"
         }
     ]
 }

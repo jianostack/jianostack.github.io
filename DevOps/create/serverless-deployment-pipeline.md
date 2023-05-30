@@ -33,12 +33,30 @@ phases:
       - echo Deployment completed on `date`
 ```
 
-Add the following policies to your CodeBuild IAM role:
-- AmazonS3FullAccess
-- CloudWatchLogsFullAccess
-- CloudWatchEventsFullAccess
-- AWSCloudFormationFullAccess
-- AWSLambda_FullAccess
+Add the following inline policy to your CodeBuild IAM role:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "logs:*",
+                "lambda:*",
+                "cloudformation:*",
+                "events:*",
+                "schemas:*",
+                "scheduler:*",
+                "pipes:*",
+                "iam:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
 
 Last step is to create a CodePipeline with no deploy step, as it is done in the CodeBuild project already.
 

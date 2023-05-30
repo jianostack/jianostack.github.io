@@ -19,6 +19,10 @@ Once connected create a new user and export TablePlus connection
 ## Github action Build and deploy PHP app to Azure Web App
 Go to the repository and then the actions page
 Create a new workflow, search for Deploy a PHP app to an Azure Web App
+See instructions on workflow yml to configure Github permissions
+- create service principle
+- download publish profile
+- add to Github secrets
 
 ## Uploads to Azure Blob
 Go to W3 Total cache plugin, general settings page and activate Azure CDN
@@ -26,11 +30,10 @@ Go to the CDN page and fill in the access details (Azure Storage blob > access k
 Got to the advanced section and check 'Use CDN links for the Media Library on admin pages'
 
 ## Migrate AWS S3 to Azure Blob
-Install AzCopy https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10
-Login to AzCopy
-Assign Storage Blob Data Reader Role to your account https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
-Execute S3 to Azure command
+Copy AWS S3 bucket to local with `aws s3 cp s3://bucket-name destination --recursive`
+Upload media to Azure blob storage with Microsoft Azure Storage Explorer
 Apply CORS policy to Azure blob storage
 Purge W3tc cache from appropiate pages
 
 ## Outbound email
+Create an SendGrid account within the resource group
