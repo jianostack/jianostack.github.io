@@ -37,3 +37,8 @@ Purge W3tc cache from appropiate pages
 
 ## Outbound email
 Create an SendGrid account within the resource group
+
+## Redirect root domain to www
+Azure app services lets you assign custom domains to the app but I could not figure out how to redirect them. I tried .htaccess, nginx.conf and web.config.
+
+I eventually used CloudFlare DNS to do the root domain redirect to www.
