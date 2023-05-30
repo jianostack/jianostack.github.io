@@ -1,7 +1,11 @@
-PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
+export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="/usr/local/sbin:$PATH"
+ZSH_THEME="robbyrussell"
+
+plugins=(git zsh-autosuggestions aws)
+
+source $ZSH/oh-my-zsh.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
