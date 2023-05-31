@@ -42,3 +42,5 @@ Create an SendGrid account within the resource group
 Azure app services lets you assign custom domains to the app but I could not figure out how to redirect them. I tried .htaccess, nginx.conf and web.config.
 
 I eventually used CloudFlare DNS to do the root domain redirect to www.
+
+https://developers.cloudflare.com/fundamentals/get-started/basic-tasks/manage-subdomains/#redirect-root-domain-to-a-subdomain
