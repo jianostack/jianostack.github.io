@@ -29,8 +29,7 @@ Dry run:
 
 ## Kernel Live Patching on Amazon Linux 2 
 
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/al2-live-patching.html
-
+See live-patching-amazon-linux.md 
 
 ## No more filezilla
 sftp

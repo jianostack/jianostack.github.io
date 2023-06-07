@@ -7,7 +7,8 @@
 Launch an EC2 instance and assign an elastic IP to it.
 
 ## Install
-Head over to [Nyr/openvpn-install](https://github.com/Nyr/openvpn-install) repo to download the shell script and install OpenVPN.
+
+`wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh`
 
 Protocol: tcp
 
@@ -54,7 +55,9 @@ Dry run:
 
 ---
 
-Resources
+References
+
+https://github.com/Nyr/openvpn-install
 
 https://notthebe.ee/blog/creating-your-own-vpn
 
