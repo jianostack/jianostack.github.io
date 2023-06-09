@@ -29,10 +29,6 @@ https://aws.github.io/copilot-cli/docs/credentials/
 ## Setup 
 Change directory into the project with a Dockerfile. 
 
-init will create a console/manifest.yml
-
-Yes deploy a test environment.
-
 `copilot init`
 
 To create a production environment.
@@ -41,6 +37,21 @@ To create a production environment.
 copilot env init
 copilot svc deploy
 ```
+
+Create RDS storage
+
+`copilot storage init`
+
+Afte storage yml file is create add this line for encryption.
+
+```
+apiclusterDBCluster:
+    StorageEncrypted: true
+```
+
+Deploy the storage with the environment and not the workload.
+
+`copilot env deploy`
 
 ## Setup Gotchas
 Try and initially deploy an ECS service that does not require other services to pass the ALB health check. 
