@@ -1,6 +1,5 @@
 <!-- Space: DOS -->
 <!-- Parent: Create -->
-<!-- Title: AWS Copilot -->
 
 # AWS Copilot
 
@@ -27,22 +26,32 @@ copilot app ls
 https://aws.github.io/copilot-cli/docs/credentials/
 
 ## Setup 
-Change directory into the project with a Dockerfile. 
 
-`copilot init`
+Create a new Copilot app and first ECS service. Do not deploy a test environment.
 
-To create a production environment.
+```
+copilot init
+```
+
+To create an environment. Do not deploy environment yet.
 
 ```
 copilot env init
-copilot svc deploy
 ```
 
 Create RDS storage
 
-`copilot storage init`
+```
+copilot storage init
+```
 
-Afte storage yml file is create add this line for encryption.
+Deploy environment now
+
+```
+copilot env deploy
+```
+
+After storage yml file is created add this line for encryption.
 
 ```
 apiclusterDBCluster:
@@ -125,15 +134,43 @@ Clean up
 
 ## Parameter store environment variable file 
 
-For runtime environment variables
-
-`copilot secret init --cli-input-yaml input.yml --overwrite`
-
-Release pipeline
-
-input.yml:
+Use input.yml file to upload environment variables to AWS parameter store.
 
 ```
-BASIC_ACC_1_U:
-  staging-ecs: massive
+copilot secret init --cli-input-yaml input.yml
 ```
+
+input.yml
+
+```
+<secret A>:
+  <env 1>: <the value of secret A in env 1>
+  <env 2>: <the value of secret A in env 2>
+```
+
+manifest.yml
+
+```
+environments:
+    dev:
+      secrets: 
+        API_BASE_URL: /copilot/copilot-app/environment/secrets/API_BASE_URL
+
+```
+
+If you need the environment variables to be baked into the build the add them to the buildspec.yml
+
+buildspec.yml
+
+```
+version: 0.2
+env:
+  variables:
+    COPILOT_APPLICATION_NAME: copilot-app
+    COPILOT_ENVIRONMENT_NAME: staging	
+  parameter-store:
+    NODE_ENV: /copilot/copilot-app/environment/secrets/NODE_ENV
+
+```
+
+https://aws.github.io/copilot-cli/docs/commands/secret-init/

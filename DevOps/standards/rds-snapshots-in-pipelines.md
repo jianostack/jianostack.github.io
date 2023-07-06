@@ -37,6 +37,9 @@ Add a new inline policy to the Codebuild IAM role
 }
 ```
 
+## AWS Copilot
+Use the same service role for your CodeBuild project as the one created by AWS Copilot's CodeBuild project! Make sure you do not allow CodeBuild to modify this service role (checkbox).
+
 ## Restoring RDS snapshots
 Snapshots are taken of the entire RDS instance. The snapshot can be restored back into the same VPC with all the network settings intact. 
 
