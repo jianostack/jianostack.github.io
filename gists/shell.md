@@ -27,9 +27,30 @@ Dry run:
 
 `sudo unattended-upgrades --dry-run`
 
-## Kernel Live Patching on Amazon Linux 2 
+## Kernel Live Patching on Debian Amazon Linux 2 
 
-See live-patching-amazon-linux.md 
+If you're on AWS you should use SSM Patch Manager!
+
+```
+sudo yum install -y yum-plugin-kernel-livepatch
+sudo yum kernel-livepatch enable -y
+sudo systemctl enable kpatch.service
+sudo amazon-linux-extras enable livepatch
+yum check-update kernel
+yum updateinfo list
+sudo yum update --security
+kpatch list
+yum kernel-livepatch supported
+```
+
+3 months reboot
+```
+sudo yum install -y kernel
+sudo reboot
+yum kernel-livepatch supported
+```
+
+https://aws.amazon.com/amazon-linux-2/faqs/
 
 ## No more filezilla
 sftp
@@ -57,8 +78,6 @@ ps aux | grep apt
 
 ## Kill process
 kill processnumber
-
-kill -9 processnumber
 
 ## network monitor
 nettop -nc
