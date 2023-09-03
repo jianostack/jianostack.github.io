@@ -1,13 +1,14 @@
 <!-- Space: DOS -->
 <!-- Parent: Create -->
 
-# Whitelist AWS Lambda
+# AWS Lambda with outbound internet access
 
-This guide will allow a Lambda function to have an outbound static IP address and indirectly connect to a IGW (internet gateway). 
+By default Lambda is not connected to a VPC, which enables it to have internet access but prevents it from accessing private services like RDS, DocumentDB and DynamoDB. Including Lambda inside a VPC breaks the internet connection. 
 
-The Lambda function lives inside the private subnets and has a NAT gateway attached to the route tables. The NAT gateway has an Elastic IP which is the outbound static IP address.
+This guide will allow a Lambda function to have an outbound static IP address which allows Lambda to connect to the internet.
 
-In the public subnets the same NAT gateway is there, along with the IGW.
+Internet access from a private subnet requires network address translation (NAT). To give internet access to an Amazon VPC-connected Lambda function, route its outbound traffic to a NAT gateway.
+
 
 ## NAT gateway
 Create a NAT gateway:
@@ -34,3 +35,9 @@ In the shared route table you need this NAT gateway route:
 0.0.0.0/0 (Destination) nat (Target)
 
 Make sure your route table is associated with the two private subnets.
+
+---
+
+Resources
+
+https://repost.aws/knowledge-center/internet-access-lambda-function
