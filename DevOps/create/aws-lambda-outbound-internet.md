@@ -12,23 +12,12 @@ Internet access from a private subnet requires network address translation (NAT)
 
 ## NAT gateway
 Create a NAT gateway:
-- Assign it to a single public subnet
+- Assign it to a single subnet
 - Connectivity type is public
 - Assign an Elastic IP to it
 
-We’re going to add it to your private subnets route table later.
-
-## Public subnets
-These public two subnets are connected to the load balancer and share the same route table.
-
-Add the NAT gateway to the route table:
-
-10.0.0.0/8 (Destination) nat (Target)
-
-The Internet Gateway and local routes should already be there.
-
 ## Private subnet
-We will need to create two additional private subnets (no internet gateway, a route to the NAT Gateway).
+We will need to create two additional private subnets.
 
 In the shared route table you need this NAT gateway route:
 
