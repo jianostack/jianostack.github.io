@@ -226,3 +226,8 @@ type php
 ```
 uname -a
 ```
+
+## shebang
+```
+#!/bin/bash
+```
