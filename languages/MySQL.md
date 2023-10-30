@@ -31,12 +31,18 @@ select user,host from mysql.user;
 
 ## create user
 ```
-create user 'dumper'@'%' identified by 'password';
+CREATE USER 'new_user'@'%';
+
+GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, CREATE, DROP, ALTER, INDEX, TRIGGER, RELOAD, CREATE USER ON *.* TO 'new_user'@'%';
+
+FLUSH PRIVILEGES;
 ```
 
 ## Grant privileges to user
 ```
-GRANT ALL PRIVILEGES ON database_name.* To 'user'@'host' WITH GRANT OPTION;
+GRANT CREATE TEMPORARY TABLES, INSERT, TRIGGER, ALTER, REFERENCES, INDEX, ALTER ROUTINE, DELETE, LOCK TABLES, EXECUTE, SHOW VIEW, SELECT, CREATE, CREATE ROUTINE, DROP, UPDATE, CREATE VIEW, EVENT, GRANT OPTION ON `fcf_local`.* TO 'new_user'@'%';
+
+FLUSH PRIVILEGES;
 ```
 
 ## mysqldump single database remotely
