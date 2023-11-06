@@ -1,5 +1,7 @@
 # DevOps notes
 
+Simply put DevOps is a culture of increasing the speed of delivery, quality of software and of reliability of services.  DevSecOps is bringing the security team into the DevOps workflows to further boost the reliability and protection of services.
+
 ### How does DNS work?
 Upon checking local cache, ISP cache, DNS cache the final source will be a root DNS.
 

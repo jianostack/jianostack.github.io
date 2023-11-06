@@ -5,7 +5,7 @@
 `cmd+shift+.`
 
 # MACOS clear DNS cache 
-sudo killall -HUP mDNSResponder
+sudo killall  mDNSResponder
 
 # MACOS paths
 `/etc/paths.d`
