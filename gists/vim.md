@@ -123,3 +123,8 @@ buffer id and buffer wipe
 shift+i
 ```
 
+### Replace with yanked word
+```
+yiw
+viwp
+```

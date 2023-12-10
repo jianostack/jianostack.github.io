@@ -138,7 +138,7 @@ sudo fuser -k Port_Number/tcp
 ps aux | egrep '(apache|httpd)'
 apache2ctl -t -D DUMP_RUN_CFG
 
-## host A record
+## host DNS
 host -a example.com
 
 ## system info
@@ -230,4 +230,14 @@ uname -a
 ## shebang
 ```
 #!/bin/bash
+```
+
+## Check localhost
+```
+curl -X GET localhost:8080
+```
+
+## Generate random 16 bit string
+```
+openssl rand -hex 16 
 ```
