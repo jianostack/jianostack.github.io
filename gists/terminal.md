@@ -92,7 +92,9 @@ tmux -CC
 du -sh *
 
 ## Processes
-htop
+`top`
+pause top
+`ctrl+S`
 
 ## compress
 tar -zcvf archive_name.tar.gz folder_to_compress
@@ -190,11 +192,14 @@ pidof name-of-process
 dig
 ```
 
-## Run commands in the background
-```
-your_command > /dev/null 2>&1 &
-jobs -l
-```
+Background jobs or detach process from foreground
+`your_command &`
+
+List jobs
+`jobs`
+
+Kill job
+`kill %1`
 
 ## HDD disk space
 ```
@@ -241,3 +246,6 @@ curl -X GET localhost:8080
 ```
 openssl rand -hex 16 
 ```
+
+## Detach Screen
+https://askubuntu.com/questions/124897/how-do-i-detach-a-screen-session-from-a-terminal
