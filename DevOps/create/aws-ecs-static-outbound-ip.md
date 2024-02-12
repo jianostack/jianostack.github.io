@@ -16,7 +16,6 @@ https://github.com/nathanpeck/aws-cloudformation-fargate/blob/master/fargate-net
 ## NAT Gateway
 
 Create a NAT gateway:
-- Assign it to a single public subnet
 - Connectivity type is public
 - Assign an Elastic IP to it
 

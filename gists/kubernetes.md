@@ -32,6 +32,29 @@ All resource all namespaces
 `kubectl get secrets`
 `kubectl delete secret tls-secret`
 
-Check certificates
+## Check certificates
 
 `kubectl describe certificate cert-name --namespace namespace`
+
+
+```
+kubectl create deployment nginx --image nginx
+kubectl expose deploy/nginx --type=NodePort --port=80
+kubectl get svc
+NAME       TYPE           CLUSTER-IP        EXTERNAL-IP    PORT(S)
+nginx      NodePort       192.168.194.217   <none>         80:32042/TCP
+
+curl -I localhost:32042
+HTTP/1.1 200 OK
+Server: nginx/1.25.2
+```
+
+Services:
+- group of pods
+
+Pods:
+- like ECS tasks
+
+Helm
+- like docker-compose
+

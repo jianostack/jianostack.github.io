@@ -97,10 +97,13 @@ pause top
 `ctrl+S`
 
 ## compress
-tar -zcvf archive_name.tar.gz folder_to_compress
+`tar -zcvf archive_name.tar.gz folder_to_compress`
 
 ## extract
-tar -zxvf archive_name.tar.gz
+`tar -zxvf archive_name.tar.gz`
+
+## extract tar uncompressed
+`tar -xf archive.tar`
 
 ## php info
 php -i
@@ -160,8 +163,15 @@ zip -er name.zip directory/*
 `grep backupd /var/log/syslog`
 `grep backupd /var/log/system.log`
 
-## Find IP address
-ifconfig
+## Find local IP address
+```
+ifconfig eth0
+ipconfig getifaddr en0
+```
+
+## Find WAN IP address
+`curl ipinfo.io`
+
 
 ## find pecl inside current dir
 ls -l | grep pecl
@@ -249,3 +259,8 @@ openssl rand -hex 16
 
 ## Detach Screen
 https://askubuntu.com/questions/124897/how-do-i-detach-a-screen-session-from-a-terminal
+
+## traceroute
+```
+traceroute -I -e yourdomain.com
+```

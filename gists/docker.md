@@ -21,24 +21,22 @@ As Hykes described it in his PyCon talk, containers are “self-contained units 
 `docker rm $(docker ps -a -q)`
 
 ## run commands
-docker exec -it <container_id> ash
-
-docker exec -it <container_id> bash
+`docker exec -it <container_id> bash`
 
 ## logs
-docker logs <container_id> | head
+`docker logs <container_id> | head`
 
 ## stats
-docker stats <container_id_1>
+`docker stats <container_id_1>`
 
 ## docker kill all
-docker kill $(docker ps -q)
+`docker kill $(docker ps -q)`
 
 ### remove images
-docker rmi image_id
+`docker rmi image_id`
 
 ## copy file
-docker cp mycontainer_id:/foo.txt foo.txt
+`docker cp mycontainer_id:/foo.txt foo.txt`
 
 ## volume
 
