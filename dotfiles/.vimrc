@@ -11,8 +11,6 @@ set noswapfile
 set nobackup
 set incsearch
 set hlsearch
-set laststatus=2 "lightline
-set noshowmode "lightline
 set backspace=indent,eol,start
 set nowrap
 

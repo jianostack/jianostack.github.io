@@ -5,7 +5,7 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 
 `eval "$(ssh-agent -s)"`
 
-## port 22:2: Too many authentication failures
+## Too many authentication failures
 You have too many key stored in your local ssh-agent.
 ```
 ssh-add -l
