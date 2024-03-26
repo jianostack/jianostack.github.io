@@ -79,3 +79,7 @@ docker build --build-arg HTTP_PROXY .
 ```
 docker logout public.ecr.aws
 ```
+
+## Best practices
+- Non root user https://medium.com/@maheshwar.ramkrushna/best-practices-for-secure-docker-containerization-non-root-user-read-only-volumes-and-resource-d34ed09b1bd3
+- Common development ports are 8080 and 8443
