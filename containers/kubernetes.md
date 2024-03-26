@@ -1,5 +1,9 @@
 ## Overview
 
+## Configure kubectl 
+To point to point a server
+`aws eks update-kubeconfig --region region-code --name my-cluster`
+
 ## Restarts the deployment
 `kubcetl rollout restart deployment deployment-name -n namespace-name`
 
@@ -8,7 +12,7 @@
 
 ## Apply
 Apply a configure file
-`kubectl apply -f filename.yaml`
+`kubectl apply -f filename.yaml -n namespace`
 
 ## Deployments
 `kubectl get deployments`
