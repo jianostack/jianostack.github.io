@@ -4,8 +4,6 @@
 To point to point a server
 `aws eks update-kubeconfig --region region-code --name my-cluster`
 
-## Restarts the deployment
-`kubcetl rollout restart deployment deployment-name -n namespace-name`
 
 ## Get all resources
 `kubectl get all -A`
@@ -15,8 +13,12 @@ Apply a configure file
 `kubectl apply -f filename.yaml -n namespace`
 
 ## Deployments
+`kubectl set image deployment/deployment-name container-name=url -n namespace`
+`kubectl rollout status deployment/deployment-name -n namespace`
 `kubectl get deployments`
-`kubectl delete deployment <deployment-name>`
+`kubectl describe deployment deployment-name -n namespace`
+`kubectl rollout undo deployment/deployment-name -n namespace`
+`kubectl rollout history deployment/deployment-name -n namespace`
 
 ## Services
 A group of pods
