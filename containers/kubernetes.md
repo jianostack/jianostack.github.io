@@ -4,7 +4,6 @@
 To point to point a server
 `aws eks update-kubeconfig --region region-code --name my-cluster`
 
-
 ## Get all resources
 `kubectl get all -A`
 
@@ -54,3 +53,6 @@ kubectl expose deploy/nginx --type=NodePort --port=80
 kubectl get svc
 curl -I localhost:32042
 ```
+
+## Restarts
+`kubectl rollout restart deployment om-navmiddleware-deployment -n omi-prd`
