@@ -56,3 +56,6 @@ curl -I localhost:32042
 
 ## Restarts
 `kubectl rollout restart deployment om-navmiddleware-deployment -n omi-prd`
+
+## Logs
+`kubectl logs -l app=label-in-yaml -n omi-prd -f --max-log-requests 30`
