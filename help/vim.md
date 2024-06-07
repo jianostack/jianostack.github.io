@@ -128,3 +128,8 @@ shift+i
 yiw
 viwp
 ```
+
+### Paste without formatting
+```
+:set paste
+```

@@ -19,3 +19,6 @@ Connect via Session manager to SFTP
 Get sessions token 
 `aws sts get-session-token --duration-seconds 129600 --serial-number arn:aws:iam::accountno:mfa/user --token-code`
 
+Federated User ARN
+`aws sts get-caller-identity`
+
