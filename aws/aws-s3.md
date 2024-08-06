@@ -10,6 +10,10 @@ https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/
 
 https://aws.amazon.com/premiumsupport/knowledge-center/copy-s3-objects-account/
 
+Copying with KMS encrypted buckets
+
+https://repost.aws/knowledge-center/s3-bucket-access-default-encryption
+
 # S3 Create a bucket
 While creating the bucket there are two kinds of access, ACL and policies.
 
