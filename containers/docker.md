@@ -86,3 +86,7 @@ docker logout public.ecr.aws
 
 ## Start container at null
 `CMD ["tail", "-f", "/dev/null"]`
+
+## export file system
+`docker export container_id | gzip file.gz`
+
