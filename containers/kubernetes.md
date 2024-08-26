@@ -1,27 +1,20 @@
 ## Installing Kubernetes 
-Option 1
-
+Option 1 Kubernetes on your Mac:
 - OrbStack (kubernetes, kubectl, docker and VMs)
-
 - orbstack.dev
-
-Option 2
-
+Option 2 kubectl command line:
 - brew install kubectl
 
 ## Connect your local kubectl to EKS
 `aws eks update-kubeconfig --region region-code --name my-cluster`
 
 ## Memory & CPU
-
 kubectl top pod -l app=label-name -n namespace
 
 ## Memory Average
-
 kubectl get pods -l app=labelname--namespace=namespace --no-headers=true | awk '{print $1}' | xargs -I {} kubectl top pod {} --namespace=namespace --use-protocol-buffers | awk '{sum+=$3} END {print sum/NR}'
 
 ## Autoscaling
-
 kubectl get hpa -n namespace
 
 kubectl describe hpa hpa-name -n namespace
@@ -65,36 +58,25 @@ kubectl get service
 kubectl delete service <service-name>
 
 ## Pods
-
+```
 kubectl get pods -A
-
 kubectl get pods
-
 kubectl describe pod-name
-
 kubectl delete pod-name
+```
 
 ## Ingress
-
 `kubectl get ingress`
 `kubectl describe ingress`
 `kubectl delete ingress -n namespace ingress-name`
-
 `kubectl get ingress --show-labels -n name-space`
 
 ## Secrets
-
-kubectl get secrets
-
-kubectl delete secret tls-secret
-
-## certificates
-
-kubectl describe certificate cert-name -n namespace
+`kubectl get secrets`
+`kubectl delete secret tls-secret`
 
 ## Logs
-
-kubectl logs -l app=label-in-yaml -n namespace -f --max-log-requests 30
+`kubectl logs -l app=label-in-yaml -n namespace -f --max-log-requests 30`
 
 ## Nodes
 `kubectl get nodes`
@@ -106,4 +88,9 @@ kubectl logs -l app=label-in-yaml -n namespace -f --max-log-requests 30
 `kubectl exec -it pod-name ash -n namespace`
 
 ## Config
-`kubectl config set-context --current --namespace=`
+```
+kubectl config
+kubectl config current-context
+kubectl config get-contexts 
+kubectl config set-context --current --namespace=
+````

@@ -263,3 +263,6 @@ traceroute -I -e yourdomain.com
 
 ## last logged in users
 `last`
+
+## list file paths
+`find /path/to/directory -type f`
