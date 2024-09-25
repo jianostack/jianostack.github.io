@@ -89,7 +89,6 @@ kubectl delete pod-name
 
 ## Config
 ```
-kubectl config
 kubectl config current-context
 kubectl config get-contexts 
 kubectl config set-context --current --namespace=
