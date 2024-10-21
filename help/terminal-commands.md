@@ -266,3 +266,9 @@ traceroute -I -e yourdomain.com
 
 ## list file paths
 `find /path/to/directory -type f`
+
+## add a existing user to existing group
+`usermod -a -G group user`
+
+## Remove User from Group Linux
+`# gpasswd --delete user group`
