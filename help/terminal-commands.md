@@ -1,6 +1,6 @@
 ## find file in linux
 
-`find / -name httpd.conf 2>/dev/null`
+`find / -name "*.pem"`
 
 ## Unattended-upgrades Ubuntu
 
