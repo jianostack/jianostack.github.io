@@ -93,3 +93,6 @@ kubectl config current-context
 kubectl config get-contexts 
 kubectl config set-context --current --namespace=
 ```
+
+## Create a new namespace 
+`kubectl create namespace my-namespac`
