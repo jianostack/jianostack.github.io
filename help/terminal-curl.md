@@ -31,3 +31,9 @@ curl -L
 
 ### Proxy
 curl --proxy proxy_url 'url'
+
+### SSL details
+curl -Iv https://example.com -L
+
+## ignore cert
+curl -vk https://cdn -H 'Host:example.com'

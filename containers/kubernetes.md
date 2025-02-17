@@ -9,10 +9,12 @@ Option 2 kubectl command line:
 `aws eks update-kubeconfig --region region-code --name my-cluster`
 
 ## Memory & CPU
-kubectl top pod -l app=label-name -n namespace
+`kubectl top pod -l app=label-name -n namespace`
 
 ## Memory Average
+```
 kubectl get pods -l app=labelname--namespace=namespace --no-headers=true | awk '{print $1}' | xargs -I {} kubectl top pod {} --namespace=namespace --use-protocol-buffers | awk '{sum+=$3} END {print sum/NR}'
+```
 
 ## Autoscaling
 kubectl get hpa -n namespace
@@ -37,17 +39,17 @@ kubectl get deployments -n namespace
 
 ## Rollout
 
-kubectl set image deployment/deployment-name container-name=url -n namespace
+kubectl set image deployment deployment-name container-name=url -n namespace
 
-kubectl rollout status deployment/deployment-name -n namespace
+kubectl rollout status deployment deployment-name -n namespace
 
 kubectl describe deployment deployment-name -n namespace
 
-kubectl rollout undo deployment/deployment-name -n namespace
+kubectl rollout undo deployment deployment-name -n namespace
 
-kubectl rollout history deployment/deployment-name -n namespace
+kubectl rollout history deployment deployment-name -n namespace
 
-kubectl get deployment/deploymentname -o=jsonpath='{.spec.replicas}' -n namespace
+kubectl get deployment deploymentname -o=jsonpath='{.spec.replicas}' -n namespace
 
 kubectl rollout restart deployment deployment-name -n namespace
 
@@ -63,6 +65,7 @@ kubectl get pods -A
 kubectl get pods
 kubectl describe pod-name
 kubectl delete pod-name
+kubectl get pod --namespace kube-system
 ```
 
 ## Ingress
@@ -78,8 +81,8 @@ kubectl delete pod-name
 ## Logs
 `kubectl logs -l app=label-in-yaml -n namespace -f --max-log-requests 30`
 
-## Nodes
-`kubectl get nodes`
+## Nodes 
+`kubectl get nodes -o wide`
 
 ## Copy
 `kubectl cp pod-name:/file/path/inside/pod . -n namespace`
@@ -94,5 +97,11 @@ kubectl config get-contexts
 kubectl config set-context --current --namespace=
 ```
 
-## Create a new namespace 
-`kubectl create namespace my-namespac`
+## namespace 
+`kubectl get ns`
+`kubectl create namespace my-namespace`
+
+## AWS EKS Node Groups
+`aws eks list-nodegroups --cluster-name my-eks-cluster`
+
+

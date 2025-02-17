@@ -164,6 +164,7 @@ zip -er name.zip directory/*
 ```
 ifconfig eth0
 ipconfig getifaddr en0
+ip a
 ```
 
 ## Find WAN IP address
@@ -272,3 +273,8 @@ traceroute -I -e yourdomain.com
 
 ## Remove User from Group Linux
 `# gpasswd --delete user group`
+
+## logs
+`tail -f error.log`
+
+
