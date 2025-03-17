@@ -85,8 +85,16 @@ docker logout public.ecr.aws
 - Common development ports are 8080 and 8443
 
 ## Start container at null
-`CMD ["tail", "-f", "/dev/null"]`
+```
+CMD ["tail", "-f", "/dev/null"]
+```
 
-## export file system
-`docker export container_id | gzip file.gz`
+## Export file system
+```
+docker export container_id | gzip file.gz
+```
 
+## Build for platform
+```
+docker build --platform linux/amd64 .
+```

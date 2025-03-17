@@ -276,5 +276,3 @@ traceroute -I -e yourdomain.com
 
 ## logs
 `tail -f error.log`
-
-

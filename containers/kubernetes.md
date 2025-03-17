@@ -103,5 +103,3 @@ kubectl config set-context --current --namespace=
 
 ## AWS EKS Node Groups
 `aws eks list-nodegroups --cluster-name my-eks-cluster`
-
-
