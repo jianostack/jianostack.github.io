@@ -276,3 +276,6 @@ traceroute -I -e yourdomain.com
 
 ## logs
 `tail -f error.log`
+
+## Processes on the system
+`ps -A`

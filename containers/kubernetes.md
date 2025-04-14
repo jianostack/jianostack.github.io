@@ -103,3 +103,12 @@ kubectl config set-context --current --namespace=
 
 ## AWS EKS Node Groups
 `aws eks list-nodegroups --cluster-name my-eks-cluster`
+
+## Override Entrypoint in Deployment Manifest
+```
+spec:
+    containers:
+    - name: container-name
+    image: repo-url
+    command: ["tail", "-f", "/dev/null"]
+```
