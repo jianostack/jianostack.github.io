@@ -58,6 +58,11 @@ shift-v to visually highlight
 :tab ter
 ```
 
+### exit terminal process
+```
+ii
+```
+
 ### wrap
 ```
 :set wrap
@@ -132,4 +137,27 @@ viwp
 ### Paste without formatting
 ```
 :set paste
+```
+
+### multiple line edit for comments
+esc will execute on all lines
+```
+ctrl+v
+shitf+i
+```
+
+### Go to the beginning of a line with Vim
+```
+_
+```
+
+## split windows
+```
+vsp new
+sp new
+```
+
+## highlight or search the word under the cursor
+```
+*
 ```
