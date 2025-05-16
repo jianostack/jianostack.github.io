@@ -157,7 +157,19 @@ vsp new
 sp new
 ```
 
-## highlight or search the word under the cursor
+### highlight or search the word under the cursor
 ```
 *
+```
+
+### select up to relative lines
+`v 4`
+
+### select previous relative lines
+`v 4-`
+
+### jump to relative lines
+```
+5j
+5k
 ```

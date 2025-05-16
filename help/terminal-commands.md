@@ -152,13 +152,18 @@ host -a example.com
 ## rebuild spotlight index
 sudo mdutil -E /
 
-## zip encrypt
+### zip encrypt
 zip -er name.zip directory/*
 
-## GREP (Globally search a Regular Expression and Print)
-`grep search-a-term-or-a-file-name /in/this/directory`
-`grep backupd /var/log/syslog`
-`grep backupd /var/log/system.log`
+### grep a file
+```
+grep backupd /var/log/system.log
+```
+
+### grep a directory
+```
+grep -r "hello" .
+```
 
 ## Find local IP address
 ```
