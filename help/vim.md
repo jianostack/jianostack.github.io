@@ -41,9 +41,6 @@ visual > or <
 ### recent file 
 `ctrl+p`
 
-### terminal in window
-`term`
-
 ### vertical split pane
 `vsp`
 
