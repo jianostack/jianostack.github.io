@@ -170,3 +170,14 @@ sp new
 5j
 5k
 ```
+
+### clear search
+no highlight
+```
+:noh
+```
+
+### Refresh netrw
+```
+r at the top of the list
+```

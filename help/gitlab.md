@@ -13,3 +13,6 @@ Exec order and DAG
 - run jobs parallel that are not related
 - fail fast method
 - stageless pipelines
+
+    
+`glab ci lint .gitlab-ci.yml`

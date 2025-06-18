@@ -22,7 +22,18 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>dd :Lexplore %:p:h<CR>
-nnoremap <Leader>da :e.<CR>
+nnoremap <leader>da :Lexplore %:p:h<CR>
+nnoremap <Leader>dd :e.<CR>
+
+lua << EOF
+require('telescope').setup{
+pickers = {
+  find_files = {
+    hidden = "true",
+    no_ignore = "true"
+  }
+  }
+}
+EOF
 
 colorscheme gruvbox
