@@ -67,6 +67,14 @@ sudo -u username
 ## Add user
 sudo adduser
 
+## Add sudo user admin
+```
+adduser name
+passwd name
+usermod -aG wheel name
+id name
+```
+
 ## Del user
 sudo deluser
 
@@ -325,4 +333,22 @@ curl -Iv https://example.com -L
 
 ## ignore cert
 curl -vk https://cdn -H 'Host:example.com'
+
+## which binary
+To search the location of a binary
+`which aws`
+
+## MACOS check timezone
+`sudo systemsetup -gettimezone`
+
+## MACOS hidden files
+`cmd+shift+.`
+
+## MACOS clear DNS cache 
+```
+sudo killall -HUP mDNSResponder
+```
+
+## MACOS paths
+`/etc/paths.d`
 
