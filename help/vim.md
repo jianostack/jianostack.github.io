@@ -160,10 +160,10 @@ sp new
 ```
 
 ### select up to relative lines
-`v 4`
+`shitf+v 4j`
 
 ### select previous relative lines
-`v 4-`
+`shift+v 4k`
 
 ### jump to relative lines
 ```
@@ -181,3 +181,6 @@ no highlight
 ```
 r at the top of the list
 ```
+
+# Compare two files
+`vimdiff file1 file2`

@@ -112,3 +112,6 @@ spec:
     image: repo-url
     command: ["tail", "-f", "/dev/null"]
 ```
+
+## Check API 
+`kubectl get --raw '/livez?verbose'`
