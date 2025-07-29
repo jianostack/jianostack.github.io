@@ -1,0 +1,51 @@
+/*
+ * Put your image in the HTML
+ * Make it's true width the same as the browser
+ *
+ * Put these elements at the end of your html
+ <div class="supertracingpaper">
+   <img src="">
+ </div>
+ */
+
+.supertracingpaper {
+  opacity:0.5;
+  pointer-events: none;
+  z-index:1;
+}
+
+.supertracingpaper img {
+  width:100%;
+  margin-top:10vh;
+}
+
+/*
+ * Not to be confused with animate
+ * https://css-tricks.com/almanac/properties/t/transition/
+ *
+ */
+div {
+  transition: all 0.5s ease;
+}
+
+/*
+ * Custom scrollbars
+ * 
+ *
+ */
+.timeline::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #ebecec;
+}
+.timeline::-webkit-scrollbar {
+  background-color: #F5F5F5;
+}
+.timeline::-webkit-scrollbar-thumb {
+  background-color: #00a9ce;
+}
+.timeline::-webkit-scrollbar-button:horizontal:end:increment {
+  background:url(/images/rightarrow.png) #8e8e8e no-repeat center;
+  background-size:4px;
+  width:20px;
+  position:absolute;
+}

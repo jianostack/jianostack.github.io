@@ -1,0 +1,38 @@
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: codebuild testing          
+
+Parameters:
+  CodeBuildProjectName:
+    Description: 'CodeBuild project name'
+    Type: String
+    Default: same as repository name plus environment
+  CodeBuildServiceRole:
+    Description: 'CodeBuild ServiceRole ARN' 
+    Type: String
+    Default: servicerole.arn
+  GitRepository:
+    Description: 'Git repository url' 
+    Type: String
+    Default: github
+
+
+Resources:
+  AppCodeBuild:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Ref CodeBuildProjectName
+      Description: Creates a Codebuild project
+      ServiceRole: !Ref CodeBuildServiceRole
+      Artifacts:
+        Type: no_artifacts
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/amazonlinux2-x86_64-standard:2.0
+      Source:
+        Location: !Ref GitRepository
+        Type: GITHUB
+      TimeoutInMinutes: 10
+      
