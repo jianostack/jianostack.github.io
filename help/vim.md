@@ -184,3 +184,4 @@ r at the top of the list
 
 # Compare two files
 `vimdiff file1 file2`
+`vim -d file1 file2`
