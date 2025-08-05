@@ -59,13 +59,24 @@ kubectl get service
 
 kubectl delete service <service-name>
 
-## Pods
+## Get
 ```
-kubectl get pods -A
-kubectl get pods
-kubectl describe pod-name
-kubectl delete pod-name
+kubectl get pod
 kubectl get pod --namespace kube-system
+kubectl get pod  --all-namespaces -o wide
+```
+
+## Describe
+```
+kubectl describe pod-name
+
+```
+
+## Delete
+```
+kubectl delete -f filename
+kubectl delete pod-name
+
 ```
 
 ## Ingress
@@ -82,7 +93,7 @@ kubectl get pod --namespace kube-system
 `kubectl logs -l app=label-in-yaml -n namespace -f --max-log-requests 30`
 
 ## Nodes 
-`kubectl get nodes -o wide`
+`kubectl get nodes --all-namespaces -o wide`
 
 ## Copy
 `kubectl cp pod-name:/file/path/inside/pod . -n namespace`
