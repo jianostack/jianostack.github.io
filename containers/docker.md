@@ -1,12 +1,14 @@
 # Docker
 
-As Hykes described it in his PyCon talk, containers are “self-contained units of software you can deliver from a server over there to a server over there, from your laptop to EC2 to a bare-metal giant server, and it will run in the same way because it is isolated at the process level and has its own file system.”
-
-## prune images
+### Prune images
 `docker image prune -a`
 
-## build
-`docker build -t image_name:image_tag_optional path_to_dockerfile`
+### build
+```
+docker build -t image_name:image_tag_optional path_to_dockerfile
+docker build --platform linux/amd64 .
+
+```
 
 ## run
 `docker run --env-file .env --env DB_HOST=host.docker.internal -p host_port:container_port image_name`
@@ -94,7 +96,3 @@ CMD ["tail", "-f", "/dev/null"]
 docker export container_id | gzip file.gz
 ```
 
-## Build for platform
-```
-docker build --platform linux/amd64 .
-```
