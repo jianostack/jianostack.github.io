@@ -1,9 +1,11 @@
 # Docker
 
 ### Prune images
-`docker image prune -a`
+```
+docker image prune -a
+```
 
-### build
+### Build
 ```
 docker build -t image_name:image_tag_optional path_to_dockerfile
 docker build --platform linux/amd64 .
