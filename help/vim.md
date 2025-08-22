@@ -1,3 +1,16 @@
+# Vim & Neovim
+
+## Getting started
+
+1. Copy init.vim
+2. Install Vim plug
+3. Install plugins
+```
+PlugInstall
+```
+
+## Commands
+
 ### delete in netrw
 ```
 Shift + D
