@@ -32,7 +32,7 @@ Host github.com *.github.com
 
 host i-* mi-*
   IdentityFile ~/.ssh/name_of_private_key
-  ProxyCommand ~/.ssh/aws-ssm-ec2-proxy-command.sh %h %r %p ~/another_dir/jy_0825_ed25519_public_key.pub
+  ProxyCommand ~/.ssh/aws-ssm-ec2-proxy-command.sh %h %r %p ~/another_dir/public_key.pub
   StrictHostKeyChecking no
 
 ```
