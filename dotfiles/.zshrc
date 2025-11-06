@@ -12,3 +12,4 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 # clear history upon exit
 trap "history -c" EXIT
 
+fish
