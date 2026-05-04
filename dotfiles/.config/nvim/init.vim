@@ -35,6 +35,14 @@ pickers = {
   }
   }
 }
+
+vim.lsp.config['lua_ls'] = {
+  cmd = { 'lua-language-server' },
+  filetypes = { 'lua' },
+  root_markers = { '.luarc.json', '.git' },
+  settings = { Lua = { diagnostics = { globals = { "vim" } } } }
+}
+vim.lsp.enable('lua_ls')
 EOF
 
 " https://github.com/dense-analysis/ale/blob/master/supported-tools.md
