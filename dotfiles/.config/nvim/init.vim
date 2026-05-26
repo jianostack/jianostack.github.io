@@ -6,6 +6,8 @@ set expandtab
 set relativenumber
 set nowrap
 set noswapfile
+set list
+set listchars=tab:»·,trail:·,eol:¬
 
 let mapleader = " "
 let g:netrw_banner = 0
@@ -21,6 +23,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fc <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>da :Lexplore %:p:h<CR>
 nnoremap <Leader>dd :Explore<CR>
 
@@ -51,3 +54,6 @@ let g:ale_linters = {
 \}
 " Only run linters named in ale_linters settings.
 let g:ale_linters_explicit = 1
+
+" trim whitespace
+autocmd BufWritePre *.* :%s/\s\+$//e
