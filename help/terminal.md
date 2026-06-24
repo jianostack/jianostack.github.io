@@ -19,15 +19,15 @@ Edit the config file:
 ```
 Unattended-Upgrade::Mail "mail@example.com";
 Unattended-Upgrade::MailOnlyOnError "true";
-Unattended-Upgrade::Automatic-Reboot "true"; 
-Unattended-Upgrade::Automatic-Reboot-Time "05:00"; 
+Unattended-Upgrade::Automatic-Reboot "true";
+Unattended-Upgrade::Automatic-Reboot-Time "05:00";
 ```
 
 Dry run:
 
 `sudo unattended-upgrades --dry-run`
 
-## Kernel Live Patching on Debian Amazon Linux 2 
+## Kernel Live Patching on Debian Amazon Linux 2
 
 If you're on AWS you should use SSM Patch Manager!
 
@@ -179,14 +179,9 @@ grep -r "hello" .
 
 ## Find local IP address
 ```
-ifconfig eth0
-ipconfig getifaddr en0
-ip a
+ifconfig en0
+curl ifconfig.me
 ```
-
-## Find WAN IP address
-`curl ipinfo.io`
-
 
 ## find pecl inside current dir
 ls -l | grep pecl
@@ -230,7 +225,7 @@ Kill job
 `df -h`
 `du -sh *`
 
-## Linux header 
+## Linux header
 How to clear apt cache in /usr/src
 ```
 sudo apt-get autoremove
@@ -243,7 +238,7 @@ Ubuntu: `grep CRON /var/log/syslog`
 
 ## what is using my port - mac
 ```
-lsof -i tcp:22000 
+lsof -i tcp:22000
 ```
 
 ## What a token references, you can use the type
@@ -270,7 +265,7 @@ curl -X GET localhost:8080
 
 ## Generate random 16 bit string
 ```
-openssl rand -hex 16 
+openssl rand -hex 16
 ```
 
 ## Detach Screen
@@ -294,11 +289,11 @@ traceroute -I -e yourdomain.com
 ## Processes on the system
 `ps -A`
 
-# CURL 
+# CURL
 Your next REST api tool
 
 ### timeout
-curl -m 
+curl -m
 
 ### Post request
 curl -X POST
@@ -319,7 +314,7 @@ curl -H
 curl -i
 
 ### Verbose
-curl -v 
+curl -v
 
 ### Follow redirects location
 curl -L
@@ -343,7 +338,7 @@ To search the location of a binary
 ## MACOS hidden files
 `cmd+shift+.`
 
-## MACOS clear DNS cache 
+## MACOS clear DNS cache
 ```
 sudo killall -HUP mDNSResponder
 ```
