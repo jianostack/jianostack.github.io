@@ -1,7 +1,7 @@
 # Windows Powershell commands
 
-## Network connection snapshot
-`netstat`
+## Network monitoring
+`get-nettcpconnection`
 
 ## Man
 `Get-Help cmd-you-need-help-with`

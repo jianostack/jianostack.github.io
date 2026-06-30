@@ -92,7 +92,7 @@ ps aux | grep apt
 kill processnumber
 
 ## network monitor
-nettop -nc
+nettop
 
 ## repeat command every 2secs
 watch -n 2 df -h
@@ -345,4 +345,5 @@ sudo killall -HUP mDNSResponder
 
 ## MACOS paths
 `/etc/paths.d`
+
 
