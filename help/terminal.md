@@ -85,11 +85,11 @@ sudo deluser
 ## Reset user pw
 sudo passwd
 
-## Find apt-get processes
+## Find processes
 ps aux | grep apt
 
 ## Kill process
-kill processnumber
+kill PID
 
 ## network monitor
 nettop
@@ -99,11 +99,6 @@ watch -n 2 df -h
 
 ## iterm tmux
 tmux -CC
-
-## Processes
-`top`
-pause top
-`ctrl+S`
 
 ## compress
 `tar -zcvf archive_name.tar.gz folder_to_compress`
